@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Mf I Love Glitter';
+  src: URL('fonts/mf-i-love-glitter.ttf') format ('ttf');
+}
+
+body {
+  padding: 0px;
+
+  background: #404246;
+}
+
+// Code from StackOverflow - START
+// http://stackoverflow.com/questions/8449272/how-can-i-make-a-menubar-fixed-on-the-top-while-scrolling
+// Double-check it: remove floats, use classes instead of HTML elements, maybe different alignment
+.sections-menu {
+  width:100%;
+  height:50px;
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+
+  background: #606264;
+  opacity: 0.4;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  float:left;
+}
+
+.nav {
+//  float:right;
+  margin-right:10px;
+  width: calc(100vw - 52px - 10px); //52px: .logo width; 10px: .nav margin-right
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.section-link {
+  list-style:none;
+  float:left;
+}
+// Code from StackOverflow - END
+
+.section-link {
+  padding: 0 10px;
+
+  text-decoration: none;
+  font-family: 'Mf I Love Glitter';
+  color: #D8D8D8;
+  font-size: 20px;
+}
+
+.section-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.site-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title-wrapper {
+  position: relative;
+
+  background: url("../images/H&D-0001.jpg");//#404244;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.title {
+  font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  font-size: 50px;
+  color: white;
+}
+
+.about-us-wrapper {
+  padding: 0 50px;
+
+  background: url("../images/H&D-0063.jpg");//#404244;
+  background-size: cover;
+}
+
+.about-us {
+  font-family: Oldtown, fantasy;
+  font-size: 18px;
+  color: red;
+}
+
+.picture {
+  display: none;
+}
+
+.active {
+  width: 100vw;
+  height: 100vh;
+
+  display: block;
+}
+
+// .active:before {
+//   content: "<";
+//   color: red;
+//   font-size: 30px;
+//   padding: 100px;
+// }
+//
+// .active:after {
+//   content:">";
+//   color: red;
+//   font-size: 30px;
+// }
+
+.pic-nav {
+  position: absolute;
+  top: 50%;
+  opacity: 0.75;
+}
+
+.nav-left {
+  left: 25px;
+  right: auto;
+  top: 1700px;
+}
+
+.nav-right {
+  left: auto;
+  right: 25px;
+  top: 1700px;
+}
+
+.arrow {
+  height: 100px;
+  width: 85px;
+}
+
+.arrow:hover {
+  opacity: 0.5;
+}

@@ -4,6 +4,7 @@ console.log('\'Allo \'Allo!');
 $(document).ready(function(){
   $('.main').onepage_scroll({
     sectionContainer: 'section',
+    pagination: true,
     loop: true,
     responsiveFallback: false
   });

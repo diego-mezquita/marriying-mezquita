@@ -1,6 +1,13 @@
 console.log('\'Allo \'Allo!');
 
-$('.main').onepage_scroll();
+
+$(document).ready(function(){
+  $('.main').onepage_scroll({
+    sectionContainer: 'section',
+    loop: true,
+    responsiveFallback: false
+  });
+});
 
 $('.js-pic-nav-right').click(function () {
     'use strict';

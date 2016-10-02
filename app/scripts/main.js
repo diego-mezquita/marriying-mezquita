@@ -1,6 +1,6 @@
 console.log('\'Allo \'Allo!');
 
-$(".main").onepage_scroll();
+$('.main').onepage_scroll();
 
 $('.js-pic-nav-right').click(function () {
     'use strict';

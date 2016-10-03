@@ -1,14 +1,14 @@
 console.log('\'Allo \'Allo!');
 
 
-$(document).ready(function(){
-  $('.main').onepage_scroll({
-    sectionContainer: 'section',
-    pagination: true,
-    loop: true,
-    responsiveFallback: false
-  });
-});
+// $(document).ready(function(){
+//   $('.main').onepage_scroll({
+//     sectionContainer: 'section',
+//     pagination: true,
+//     loop: true,
+//     responsiveFallback: false
+//   });
+// });
 
 $('.js-pic-nav-right').click(function () {
     'use strict';

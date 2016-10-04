@@ -14,16 +14,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- Init the onepage-scroll -->
-    <script>
-  	  $(document).ready(function(){
-        $(".main").onepage_scroll({
-          sectionContainer: "section",
-          loop: true,
-          responsiveFallback: false
-        });
-  		});
-	   </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -34,8 +26,6 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
-
     <!-- build:js scripts/vendor/jquery.js -->
     <script type="text/javascript" src="/bower_components/onepage-scroll/jquery.onepage-scroll.js"></script>
     <!-- endbuild -->
@@ -43,6 +33,19 @@
     <!-- build:css styles/onepage_scroll.css -->
     <link rel="stylesheet" type="text/css" href="/bower_components/onepage-scroll/onepage-scroll.css">
     <!-- endbuild -->
+
+
+    <!-- Init the onepage-scroll -->
+    <script type="text/javascript">
+  	  $(document).ready(function(){
+        $(".main").onepage_scroll({
+          sectionContainer: "section",
+          loop: true,
+          responsiveFallback: false
+        });
+  		});
+	   </script>
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -85,9 +88,9 @@
         <p>♥ from the Yeoman team</p>
       </div>
     </div> -->
-    <!--
 
-      THIS IS THE WEBSITE HTML CODE
+
+      <!-- THIS IS THE WEBSITE HTML CODE -->
 
     <div class="site-wrapper main">
       <div class="sections-menu">
@@ -99,9 +102,12 @@
         </div>
       </div>
 
-      <div class="wrapper title-wrapper">
-        <p class="title">[Holly_Diego]</p>
-      </div>
+      <section>
+        <div class="wrapper title-wrapper">
+          <p class="title">[Holly_Diego]</p>
+          <p class="subtitle">8 * 17 * 2017</p>
+        </div>
+      </section>
 
       <section>
         <div id="about-us-id" class="wrapper about-us-wrapper">
@@ -138,7 +144,10 @@
           </a>
         </div>
       </section>
-    </div> -->
+    </div>
+
+    <!--
+    THIS IS THE TEST CODE
 
     <div class="main">
       <section>
@@ -159,7 +168,7 @@
         <div class="section four">
         </div>
       </section>
-    </div>
+    </div> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

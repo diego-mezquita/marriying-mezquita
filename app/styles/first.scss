@@ -77,6 +77,7 @@ body {
 }
 
 .title-wrapper {
+  padding-top: 20vh;
   position: relative;
 
   background: url("../images/H&D-0001.jpg");//#404244;
@@ -86,7 +87,15 @@ body {
 
 .title {
   font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
-  font-size: 50px;
+  font-size: 100px;
+  color: white;
+}
+
+.subtitle {
+  padding-top: 45px;
+
+  font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  font-size: 40px;
   color: white;
 }
 
@@ -136,13 +145,11 @@ body {
 .nav-left {
   left: 25px;
   right: auto;
-  top: 1700px;
 }
 
 .nav-right {
   left: auto;
   right: 25px;
-  top: 1700px;
 }
 
 .arrow {

@@ -77,12 +77,21 @@ body {
 }
 
 .title-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   padding-top: 20vh;
   position: relative;
 
   background: url("../images/H&D-0001.jpg");//#404244;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.main-title {
+  margin-top:  2%;
+  max-width: 800px;
+  position: fixed;
 }
 
 .title {
@@ -110,6 +119,20 @@ body {
   font-family: Oldtown, fantasy;
   font-size: 18px;
   color: red;
+}
+
+.about-us__options {
+  display: flex;
+  flex-grow: 1;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.about-us__icon {
+  width: 30vw;
 }
 
 .picture {
@@ -159,4 +182,107 @@ body {
 
 .arrow:hover {
   opacity: 0.5;
+}
+
+// CSS for the ligthboxes -----
+
+/* General CSS Setup */
+// body{
+//   background-color: lightblue;
+//   font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;
+// }
+
+// /* container */
+// .container {
+//   padding: 5% 5%;
+// }
+
+/* CSS talk bubble */
+.lightbox {
+	margin: 40px;
+  display: inline-block;
+  position: relative;
+	// width: 200px;
+	// height: auto;
+  width: 80vw;
+	height: 60vh;
+	background-color: #333333;
+  opacity: 0.6;
+}
+
+.border{
+  border: 8px solid #666;
+}
+
+.lightbox--is-round{
+  border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.lightbox--is-left {
+  // visibility: hidden;
+  display: none;
+}
+
+.lightbox--is-left::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -20px;
+	right: auto;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent transparent #333333;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-visible{
+  // visibility: visible;
+  display: block;
+}
+
+.lightbox__meet {
+
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+// OUR STORY ANIMATIONS -------
+
+.about-us__icon--is-animation {
+    position: relative;
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.about-us__icon--is-animation {
+  -webkit-animation-name: animation_left_up; /* Chrome, Safari, Opera */
+  animation-name: animation_left_up;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation_left_up {
+    0%   {left:0px; top:0px;}
+    100% {left:-10vw; top:-40vh;}
+}
+
+/* Standard syntax */
+@keyframes animation_left_up {
+    0%   {left:-0px; top:0px;}
+    100% {left:-10vw; top:-40vh;}
 }

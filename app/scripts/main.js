@@ -35,6 +35,25 @@ $('.js-pic-nav-left').click(function () {
     currentActive.removeClass('active');
 });
 
+$('.js-meet-click').click(function () {
+    'use strict';
+    console.log('I`m here!');
+
+
+    let lightbox = $('.lightbox--is-left');
+    let meetIcon = $('.about-us__options__meet');
+
+      lightbox.toggleClass('lightbox--is-visiblen')
+      meetIcon.toggleClass('about-us__icon--is-animation');
+    // if(lightbox.hasClass('lightbox--is-visiblen')) {
+    //   lightbox.removeClass('lightbox--is-visiblen')
+    //   meetIcon.removeClass('about-us__icon--is-animation');
+    // } else {
+    //   lightbox.addClass('lightbox--is-visiblen');
+    //   meetIcon.addClass('about-us__icon--is-animation');
+    // }
+});
+
 // $('.js-nav-btn').click(function () {
 //   $(this.href).
 // });

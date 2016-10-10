@@ -27,7 +27,7 @@ body {
 .logo {
   width: 52px;
   height: 52px;
-  float:left;
+  // float:left;
 }
 
 .nav {
@@ -68,10 +68,10 @@ body {
 }
 
 .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
@@ -109,7 +109,7 @@ body {
 }
 
 .about-us-wrapper {
-  padding: 0 50px;
+  padding: 0 5vw;
 
   background: url("../images/H&D-0063.jpg");//#404244;
   background-size: cover;
@@ -122,17 +122,38 @@ body {
 }
 
 .about-us__options {
-  display: flex;
-  flex-grow: 1;
+  // display: flex;
+  // flex-grow: 1;
   width: 90vw;
-  align-items: center;
-  justify-content: center;
+  height: 6vh;
+  // position: absolute;
+  // top: 50vh;
+  // align-items: center;
+  // justify-content: center;
 
 
 }
 
-.about-us__icon {
-  width: 30vw;
+.about-us__options__meet {
+  width: 100%;
+}
+
+.about-us__icon-left {
+  position: absolute;
+  top: 50vh;
+  left: calc(25vw - 26px);
+}
+
+.about-us__icon-center {
+  position: absolute;
+  top: 50vh;
+  left: calc(50vw - 26px);
+}
+
+.about-us__icon-right {
+  position: absolute;
+  top: 50vh;
+  right: calc(25vw - 26px);
 }
 
 .picture {
@@ -204,7 +225,8 @@ body {
   position: relative;
 	// width: 200px;
 	// height: auto;
-  width: 80vw;
+  top: 10vh;
+  width: 86vw;
 	height: 60vh;
 	background-color: #333333;
   opacity: 0.6;
@@ -263,26 +285,118 @@ body {
 // OUR STORY ANIMATIONS -------
 
 .about-us__icon--is-animation {
-    position: relative;
+    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
 
-.about-us__icon--is-animation {
-  -webkit-animation-name: animation_left_up; /* Chrome, Safari, Opera */
-  animation-name: animation_left_up;
+.about-us__icon--is-animationZZZZ {
+    // position: relative;
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.about-us__icon--is-animation-up {
+  -webkit-animation-name: animation_up; /* Chrome, Safari, Opera */
+  animation-name: animation_up;
+
+  animation-fill-mode: forwards;
+}
+
+.about-us__icon--is-animation-left {
+  -webkit-animation-name: animation_left; /* Chrome, Safari, Opera */
+  animation-name: animation_left;
+
+  animation-fill-mode: forwards;
+}
+
+.about-us__icon--is-animation-right {
+  -webkit-animation-name: animation_right; /* Chrome, Safari, Opera */
+  animation-name: animation_right;
+
+  // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  // animation-duration: 1s;
+  // animation-timing-function: ease-out;
+  // animation-fill-mode: forwards;
 }
 
 /* Chrome, Safari, Opera */
-@-webkit-keyframes animation_left_up {
-    0%   {left:0px; top:0px;}
-    100% {left:-10vw; top:-40vh;}
+@-webkit-keyframes animation_up {
+  0%   {
+    // justify-content: center;
+    top: 50vh;
+  }
+  100% {
+    top: 20vh;
+    // justify-content: flex-start;
+  }
+}
+
+@-webkit-keyframes animation_up {
+  0%   {
+    // justify-content: center;
+    top: 50vh;
+  }
+  100% {
+    top: 20vh;
+    // justify-content: flex-start;
+  }
 }
 
 /* Standard syntax */
-@keyframes animation_left_up {
-    0%   {left:-0px; top:0px;}
-    100% {left:-10vw; top:-40vh;}
+@keyframes animation_left {
+  0%   {
+    // justify-content: center;
+    left: calc(25vw - 26px);
+    top: 50vh;
+  }
+  100% {
+    left: calc(7vw - 26px);
+    top: 20vh;
+    // justify-content: flex-start;
+  }
+}
+
+@keyframes animation_left {
+  0%   {
+    // justify-content: center;
+    left: calc(25vw - 26px);
+    top: 50vh;
+  }
+  100% {
+    left: calc(7vw - 26px);
+    top: 20vh;
+    // justify-content: flex-start;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation_right {
+  0%   {
+    // justify-content: center;
+    right: calc(25vw - 26px);
+    top: 50vh;
+  }
+  100% {
+    right: calc(7vw - 26px);
+    top: 20vh;
+    // justify-content: flex-start;
+  }
+}
+
+@-webkit-keyframes animation_right {
+  0%   {
+    // justify-content: center;
+    right: calc(25vw - 26px);
+    top: 50vh;
+  }
+  100% {
+    right: calc(7vw - 26px);
+    top: 20vh;
+    // justify-content: flex-start;
+  }
 }

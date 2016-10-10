@@ -35,24 +35,65 @@ $('.js-pic-nav-left').click(function () {
     currentActive.removeClass('active');
 });
 
-$('.js-meet-click').click(function () {
-    'use strict';
-    console.log('I`m here!');
+let lightboxIsVisibleValue = $('.lightbox--is-left').hasClass('lightbox--is-visible');
+
+function ourStoryAnimationApply() {
+  'use strict';
+  console.log('I`m here!');
 
 
-    let lightbox = $('.lightbox--is-left');
-    let meetIcon = $('.about-us__options__meet');
+  let lightbox = $('.lightbox--is-left');
+  let optionsMenu = $('.about-us__options');
+  let iconLeft = $('.js-meet-click');
+  let iconCenter = $('.js-love-click');
+  let iconRight= $('.js-porposal-click');
 
-      lightbox.toggleClass('lightbox--is-visiblen')
-      meetIcon.toggleClass('about-us__icon--is-animation');
-    // if(lightbox.hasClass('lightbox--is-visiblen')) {
-    //   lightbox.removeClass('lightbox--is-visiblen')
-    //   meetIcon.removeClass('about-us__icon--is-animation');
-    // } else {
-    //   lightbox.addClass('lightbox--is-visiblen');
-    //   meetIcon.addClass('about-us__icon--is-animation');
-    // }
-});
+  if(lightbox.hasClass('lightbox--is-visible') === lightboxIsVisibleValue) {
+    iconLeft.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-left');
+    iconCenter.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-up');
+    iconRight.toggleClass('about-us__icon--is-animationZZZZ about-us__icon--is-animation-right');
+
+    // TODO add prefixes for all browsers
+    $('.about-us__icon--is-animationZZZZ').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
+      function(){
+        lightbox.toggleClass('lightbox--is-visible');
+    });
+    lightboxIsVisibleValue = !lightboxIsVisibleValue;
+  } else {
+    lightboxIsVisibleValue = lightbox.hasClass('lightbox--is-visible');
+  }
+
+}
+
+// $('.js-meet-click').click(function () {
+//     'use strict';
+//     console.log('I`m here!');
+//
+//
+//     let lightbox = $('.lightbox--is-left');
+//     let optionsMenu = $('.about-us__options');
+//     let iconLeft = $('.js-meet-click');
+//     let iconRight=$('.js-porposal-click');
+//
+//     optionsMenu.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-up');
+//     iconLeft.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-left');
+//     iconRight.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-right');
+//
+//     // TODO add prefixes for all browsers
+//     $(".about-us__icon--is-animation").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+//       function(){
+//         lightbox.toggleClass('lightbox--is-visible');
+//     });
+//
+// });
+
+// $('.js-meet-click').click(funtion () {
+//   ourStoryAnimationApply();
+//   });
+$('.js-meet-click').click(ourStoryAnimationApply);
+$('.js-love-click').click(ourStoryAnimationApply);
+$('.js-porposal-click').click(ourStoryAnimationApply);
+
 
 // $('.js-nav-btn').click(function () {
 //   $(this.href).

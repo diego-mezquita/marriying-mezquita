@@ -221,14 +221,14 @@ body {
 /* CSS talk bubble */
 .lightbox {
 	margin: 40px;
-  display: inline-block;
+  display: none;
   position: relative;
 	// width: 200px;
 	// height: auto;
   top: 10vh;
   width: 86vw;
 	height: 60vh;
-	background-color: #333333;
+	background-color: #fff;
   opacity: 0.6;
 }
 
@@ -244,7 +244,7 @@ body {
 
 .lightbox--is-left {
   // visibility: hidden;
-  display: none;
+  display: inline-block;;
 }
 
 .lightbox--is-left::before {
@@ -256,7 +256,45 @@ body {
 	right: auto;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent transparent transparent #333333;
+	border-color: transparent transparent transparent #fff;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-center {
+  // visibility: hidden;
+  display: inline-block;;
+}
+
+.lightbox--is-center::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -43px;
+  right: 42vw;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #fff transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-right {
+  // visibility: hidden;
+  display: inline-block;;
+}
+
+.lightbox--is-right::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -20px;
+	right: 0;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent #fff transparent transparent;
   z-index: -1;
   // visibility: hidden;
 }

@@ -36,29 +36,43 @@ $('.js-pic-nav-left').click(function () {
 });
 
 let lightboxIsVisibleValue = $('.lightbox--is-left').hasClass('lightbox--is-visible');
+let activeSectionAboutUs;
 
 function ourStoryAnimationApply() {
   'use strict';
   console.log('I`m here!');
 
+  let iconClicked = this.classList[0].split('-')[2];
 
-  let lightbox = $('.lightbox--is-left');
+  let lightbox = $('.lightbox');
   let optionsMenu = $('.about-us__options');
   let iconLeft = $('.js-meet-click');
   let iconCenter = $('.js-love-click');
   let iconRight= $('.js-porposal-click');
 
-  if(lightbox.hasClass('lightbox--is-visible') === lightboxIsVisibleValue) {
+  if(lightbox.hasClass('lightbox--is-visible') === lightboxIsVisibleValue && lightboxIsVisibleValue === false) {
     iconLeft.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-left');
     iconCenter.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-up');
     iconRight.toggleClass('about-us__icon--is-animationZZZZ about-us__icon--is-animation-right');
 
+    activeSectionAboutUs = iconClicked;
+
     // TODO add prefixes for all browsers
     $('.about-us__icon--is-animationZZZZ').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
       function(){
-        lightbox.toggleClass('lightbox--is-visible');
+        lightbox.toggleClass('lightbox--is-visible lightbox--is-' + iconClicked);
     });
     lightboxIsVisibleValue = !lightboxIsVisibleValue;
+  } else if (lightboxIsVisibleValue === true) {
+    if (iconClicked !== activeSectionAboutUs) {
+      $('.lightbox').toggleClass('lightbox--is-' + activeSectionAboutUs);
+      $('.lightbox').toggleClass('lightbox--is-' + iconClicked);
+
+      activeSectionAboutUs = iconClicked;
+    } else {
+      console.log('hola');
+    }
+
   } else {
     lightboxIsVisibleValue = lightbox.hasClass('lightbox--is-visible');
   }

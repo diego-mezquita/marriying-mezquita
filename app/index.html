@@ -26,6 +26,11 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+    <script src="/bower_components/superslides/dist/jquery.superslides.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bower_components/superslides/dist/stylesheets/superslides.css">
+
+
+
     <!-- build:js scripts/vendor/jquery.js -->
     <script type="text/javascript" src="/bower_components/onepage-scroll/jquery.onepage-scroll.js"></script>
     <!-- endbuild -->
@@ -43,6 +48,8 @@
           loop: true,
           responsiveFallback: false
         });
+
+        $('#slides').superslides();
   		});
 	   </script>
 
@@ -134,7 +141,9 @@
       </section>
 
       <section>
-        <div id="gallery-id" class="wrapper gallery-wrapper">
+        <!-- GALLERY CREATED BY ME -->
+
+        <!-- <div id="gallery-id" class="wrapper gallery-wrapper">
           <div class="carrosel">
             <div class="picture-wrapper">
               <img class="picture active" src="./images/H&D-0001.jpg"/>
@@ -159,6 +168,23 @@
           <a class="pic-nav nav-right js-pic-nav-right" href="#gallery" data-slide="next">
             <img  class="arrow" src="./images/arrow_right.png"/>
           </a>
+        </div> -->
+
+        <div id="slides">
+          <div class="slides-container">
+            <img src="./images/H&D-0001.jpg" alt="">
+            <img src="./images/H&D-0063.jpg" alt="">
+            <img src="./images/gijon-letronas.jpg" alt="">
+          </div>
+
+          <nav class="slides-navigation">
+            <a href="#" class="next">
+              <i class="icon-chevron-right"></i>
+            </a>
+            <a href="#" class="prev">
+              <i class="icon-chevron-left"></i>
+            </a>
+          </nav>
         </div>
       </section>
     </div>

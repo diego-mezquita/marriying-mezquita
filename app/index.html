@@ -9,13 +9,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="/bower_components/jquery/jquery.min.js"></script>
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -29,29 +23,12 @@
     <script src="/bower_components/superslides/dist/jquery.superslides.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/bower_components/superslides/dist/stylesheets/superslides.css">
 
-
-
-    <!-- build:js scripts/vendor/jquery.js -->
-    <script type="text/javascript" src="/bower_components/onepage-scroll/jquery.onepage-scroll.js"></script>
-    <!-- endbuild -->
-
-    <!-- build:css styles/onepage_scroll.css -->
-    <link rel="stylesheet" type="text/css" href="/bower_components/onepage-scroll/onepage-scroll.css">
-    <!-- endbuild -->
-
-
-    <!-- Init the onepage-scroll -->
+    <!-- Init the superslides -->
     <script type="text/javascript">
-  	  $(document).ready(function(){
-        $(".main").onepage_scroll({
-          sectionContainer: "section",
-          loop: true,
-          responsiveFallback: false
-        });
-
-        $('#slides').superslides();
-  		});
-	   </script>
+    $(document).ready(function(){
+      $('#slides').superslides();
+    });
+    </script>
 
   </head>
   <body>
@@ -109,109 +86,50 @@
         </div>
       </div>
 
-      <section>
-        <div class="wrapper title-wrapper">
-          <img class="main-title" src="../images/holly&diego.png"><img/>
-        </div>
-      </section>
+      <div class="wrapper title-wrapper">
+        <img class="main-title" src="../images/holly&diego.png"></img>
+      </div>
 
-      <section>
-        <div id="about-us-id" class="wrapper about-us-wrapper">
-          <p class="title">Our Story</p>
-          <!-- <p class="about-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus eros, faucibus id semper sed, efficitur at est. Vivamus suscipit, urna sed eleifend tincidunt, turpis quam molestie nunc, quis aliquet neque lorem sit amet lorem. Quisque fermentum tellus vel sapien aliquet porttitor. Morbi congue non est vel congue. Nulla bibendum nibh tristique, imperdiet ipsum a, varius justo. Integer placerat mollis felis nec suscipit. Curabitur nisi erat, malesuada sed nibh eget, euismod convallis nibh. Suspendisse dictum faucibus elit, quis dignissim libero accumsan ut.<br><br>In in porttitor neque, eget ultrices lacus. Curabitur pharetra, arcu tincidunt rhoncus placerat, enim massa luctus augue, sed pellentesque sem sem accumsan sem. Maecenas in tempus erat. Curabitur varius ex eu velit porta, a rutrum tortor dignissim. Donec tincidunt, purus ut pretium consequat, nulla est feugiat ligula, nec tristique magna nibh id magna. Vivamus in sollicitudin est, et feugiat nisi. Vestibulum maximus lectus in magna pretium, et dapibus turpis varius.</p> -->
-          <!-- <div class="about-us__options"> -->
-            <!-- <div class="about-us__options__meet"> -->
-              <img class="about-us__icon-left logo js-meet-click" src="./images/wolverine.svg"/>
-            <!-- </div>
-            <div class="about-us__options__love"> -->
-              <img class="about-us__icon-center logo js-love-click" src="./images/batman.svg"/>
-            <!-- </div>
-            <div class="about-us__options__porposal"> -->
-              <img class="about-us__icon-right logo js-porposal-click" src="./images/deadpool.svg"/>
-            <!-- </div> -->
-          <!-- </div> -->
-          <!-- <div class="talk-bubble tri-right round top-left">
-            <div class="talktext"> -->
-          <div class="lightbox lightbox--is-round">
-            <div class="lightbox__text">
-              <p>And now using .round we can smooth the sides down. Also uses .btm-left to show a triangle at the bottom flush to the left.</p>
-            </div>
+      <div id="about-us-id" class="wrapper about-us-wrapper">
+        <p class="title">Our Story</p>
+        <!-- <p class="about-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus eros, faucibus id semper sed, efficitur at est. Vivamus suscipit, urna sed eleifend tincidunt, turpis quam molestie nunc, quis aliquet neque lorem sit amet lorem. Quisque fermentum tellus vel sapien aliquet porttitor. Morbi congue non est vel congue. Nulla bibendum nibh tristique, imperdiet ipsum a, varius justo. Integer placerat mollis felis nec suscipit. Curabitur nisi erat, malesuada sed nibh eget, euismod convallis nibh. Suspendisse dictum faucibus elit, quis dignissim libero accumsan ut.<br><br>In in porttitor neque, eget ultrices lacus. Curabitur pharetra, arcu tincidunt rhoncus placerat, enim massa luctus augue, sed pellentesque sem sem accumsan sem. Maecenas in tempus erat. Curabitur varius ex eu velit porta, a rutrum tortor dignissim. Donec tincidunt, purus ut pretium consequat, nulla est feugiat ligula, nec tristique magna nibh id magna. Vivamus in sollicitudin est, et feugiat nisi. Vestibulum maximus lectus in magna pretium, et dapibus turpis varius.</p> -->
+        <div class="about-us__options">
+          <div class="about-us__options__meet">
+            <img class="about-us__icon-left logo js-meet-click" src="./images/wolverine.svg"/>
+          </div>
+          <div class="about-us__options__love">
+            <img class="about-us__icon-center logo js-love-click" src="./images/batman.svg"/>
+          </div>
+          <div class="about-us__options__porposal">
+            <img class="about-us__icon-right logo js-porposal-click" src="./images/deadpool.svg"/>
           </div>
         </div>
-      </section>
-
-      <section>
-        <!-- GALLERY CREATED BY ME -->
-
-        <!-- <div id="gallery-id" class="wrapper gallery-wrapper">
-          <div class="carrosel">
-            <div class="picture-wrapper">
-              <img class="picture active" src="./images/H&D-0001.jpg"/>
-            </div>
-
-            <div class="picture-wrapper">
-              <img class="picture" src="./images/H&D-0063.jpg"/>
-            </div>
-
-            <div class="picture-wrapper">
-              <img class="picture" src="./images/gijon-letronas.jpg"/>
-            </div>
-
-            <div class="picture-wrapper">
-              <img class="picture" src="./images/H&D-0063.jpg"/>
-            </div>
+        <!-- <div class="talk-bubble tri-right round top-left">
+          <div class="talktext"> -->
+        <div class="lightbox lightbox--is-round">
+          <div class="lightbox__text">
+            <p>And now using .round we can smooth the sides down. Also uses .btm-left to show a triangle at the bottom flush to the left.</p>
           </div>
+        </div>
+      </div>
 
-          <a class="pic-nav nav-left js-pic-nav-left" href="#gallery" data-slide="prev">
-            <img  class="arrow" src="./images/arrow_left.png"/>
+      <div id="slides" class="wrapper gallery-wrapper">
+        <div class="slides-container">
+          <img src="./images/H&D-0001.jpg" alt="">
+          <img src="./images/H&D-0063.jpg" alt="">
+          <img src="./images/gijon-letronas.jpg" alt="">
+        </div>
+
+        <nav class="slides-navigation">
+          <a href="#" class="next">
+            <i class="icon-chevron-right"></i>
           </a>
-          <a class="pic-nav nav-right js-pic-nav-right" href="#gallery" data-slide="next">
-            <img  class="arrow" src="./images/arrow_right.png"/>
+          <a href="#" class="prev">
+            <i class="icon-chevron-left"></i>
           </a>
-        </div> -->
-
-        <div id="slides">
-          <div class="slides-container">
-            <img src="./images/H&D-0001.jpg" alt="">
-            <img src="./images/H&D-0063.jpg" alt="">
-            <img src="./images/gijon-letronas.jpg" alt="">
-          </div>
-
-          <nav class="slides-navigation">
-            <a href="#" class="next">
-              <i class="icon-chevron-right"></i>
-            </a>
-            <a href="#" class="prev">
-              <i class="icon-chevron-left"></i>
-            </a>
-          </nav>
-        </div>
-      </section>
+        </nav>
+      </div>
     </div>
-
-    <!--
-    THIS IS THE TEST CODE
-
-    <div class="main">
-      <section>
-        <div class="section one">
-        </div>
-      </section>
-
-      <section>
-        <div class="section two">
-        </div>
-      </section>
-      <section>
-        <div class="section three">
-        </div>
-
-      </section>
-      <section>
-        <div class="section four">
-        </div>
-      </section>
-    </div> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -222,12 +140,6 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>

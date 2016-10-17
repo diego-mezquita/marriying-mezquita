@@ -50,17 +50,17 @@ function ourStoryAnimationApply() {
   let iconCenter = $('.js-love-click');
   let iconRight= $('.js-porposal-click');
 
-  if(lightbox.hasClass('lightbox--is-visible') === lightboxIsVisibleValue && lightboxIsVisibleValue === false) {
+  if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValue) {
     iconLeft.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-left');
     iconCenter.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-up');
-    iconRight.toggleClass('about-us__icon--is-animationZZZZ about-us__icon--is-animation-right');
+    iconRight.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-right');
 
     activeSectionAboutUs = iconClicked;
 
     // TODO add prefixes for all browsers
-    $('.about-us__icon--is-animationZZZZ').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
+    $('.about-us__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
       function(){
-        lightbox.toggleClass('lightbox--is-visible lightbox--is-' + iconClicked);
+        lightbox.toggleClass('animated fadeIn lightbox--is-visible lightbox--is-' + iconClicked);
     });
     lightboxIsVisibleValue = !lightboxIsVisibleValue;
   } else if (lightboxIsVisibleValue === true) {

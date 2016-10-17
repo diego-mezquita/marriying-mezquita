@@ -3,6 +3,8 @@
   src: URL('fonts/mf-i-love-glitter.ttf') format ('ttf');
 }
 
+
+
 body {
   padding: 0px;
 
@@ -92,6 +94,7 @@ body {
   margin-top:  2%;
   max-width: 800px;
   position: fixed;
+  // z-index: 0;
 }
 
 .title {
@@ -113,6 +116,7 @@ body {
 
   background: url("../images/H&D-0063.jpg");//#404244;
   background-size: cover;
+  // z-index: 2;
 }
 
 .about-us {
@@ -140,19 +144,19 @@ body {
 
 .about-us__icon-left {
   position: absolute;
-  top: 50vh;
+  top: 150vh;
   left: calc(25vw - 26px);
 }
 
 .about-us__icon-center {
   position: absolute;
-  top: 50vh;
+  top: 150vh;
   left: calc(50vw - 26px);
 }
 
 .about-us__icon-right {
   position: absolute;
-  top: 50vh;
+  top: 150vh;
   right: calc(25vw - 26px);
 }
 
@@ -366,10 +370,10 @@ body {
 @-webkit-keyframes animation_up {
   0%   {
     // justify-content: center;
-    top: 50vh;
+    top: 150vh;
   }
   100% {
-    top: 20vh;
+    top: 120vh;
     // justify-content: flex-start;
   }
 }
@@ -377,10 +381,10 @@ body {
 @-webkit-keyframes animation_up {
   0%   {
     // justify-content: center;
-    top: 50vh;
+    top: 150vh;
   }
   100% {
-    top: 20vh;
+    top: 120vh;
     // justify-content: flex-start;
   }
 }
@@ -390,11 +394,11 @@ body {
   0%   {
     // justify-content: center;
     left: calc(25vw - 26px);
-    top: 50vh;
+    top: 150vh;
   }
   100% {
     left: calc(7vw - 26px);
-    top: 20vh;
+    top: 120vh;
     // justify-content: flex-start;
   }
 }
@@ -403,11 +407,11 @@ body {
   0%   {
     // justify-content: center;
     left: calc(25vw - 26px);
-    top: 50vh;
+    top: 150vh;
   }
   100% {
     left: calc(7vw - 26px);
-    top: 20vh;
+    top: 120vh;
     // justify-content: flex-start;
   }
 }
@@ -417,11 +421,11 @@ body {
   0%   {
     // justify-content: center;
     right: calc(25vw - 26px);
-    top: 50vh;
+    top: 150vh;
   }
   100% {
     right: calc(7vw - 26px);
-    top: 20vh;
+    top: 120vh;
     // justify-content: flex-start;
   }
 }
@@ -430,11 +434,11 @@ body {
   0%   {
     // justify-content: center;
     right: calc(25vw - 26px);
-    top: 50vh;
+    top: 150vh;
   }
   100% {
     right: calc(7vw - 26px);
-    top: 20vh;
+    top: 120vh;
     // justify-content: flex-start;
   }
 }

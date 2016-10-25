@@ -58,6 +58,15 @@ $(window).scroll(function(){
     $(".main-title").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 
+$(document).scroll(function () {
+  const yPosition = $(this).scrollTop();
+  if (yPosition > $(window).height()) {
+      $('.sections-menu').fadeIn();
+  } else {
+      $('.sections-menu').fadeOut();
+  }
+});
+
 $('.js-pic-nav-right').click(function () {
     'use strict';
 

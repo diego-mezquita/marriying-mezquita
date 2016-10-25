@@ -55,7 +55,7 @@ function onScroll(event){
 
 // Fade out title image when scroll
 $(window).scroll(function(){
-    $(".main-title").css("opacity", 1 - $(window).scrollTop() / 250);
+    $('.main-title').css('opacity', 1 - $(window).scrollTop() / 250);
   });
 
 $(document).scroll(function () {

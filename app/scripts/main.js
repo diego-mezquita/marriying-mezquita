@@ -1,11 +1,7 @@
 console.log('\'Allo \'Allo!');
 
 $(document).ready(function(){
-
-
   $('#slides').superslides();
-
-
 });
 
 $(document).ready(function () {
@@ -56,6 +52,11 @@ function onScroll(event){
 //     responsiveFallback: false
 //   });
 // });
+
+// Fade out title image when scroll
+$(window).scroll(function(){
+    $(".main-title").css("opacity", 1 - $(window).scrollTop() / 250);
+  });
 
 $('.js-pic-nav-right').click(function () {
     'use strict';

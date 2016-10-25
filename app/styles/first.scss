@@ -32,7 +32,7 @@ body {
   // float:left;
 }
 
-.nav {
+.nav-menu {
 //  float:right;
   margin-right:10px;
   width: calc(100vw - 52px - 10px); //52px: .logo width; 10px: .nav margin-right
@@ -60,6 +60,20 @@ body {
 .section-link:hover {
   text-decoration: none;
   color: white;
+}
+
+.section-link.active-link {
+  color: #fff;
+  background: #4a9529;
+
+}
+
+.section-one {
+  background: red;
+}
+
+.section-two {
+  background: yellow;
 }
 
 .site-wrapper {

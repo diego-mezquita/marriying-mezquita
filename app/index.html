@@ -25,9 +25,23 @@
 
     <!-- Init the superslides -->
     <script type="text/javascript">
-    $(document).ready(function(){
-      $('#slides').superslides();
-    });
+      // $(document).ready(function(){
+      //   $(window).scroll(function () {
+      //
+      //       var y = $(this).scrollTop();
+      //
+      //       $('.section-link').each(function (event) {
+      //           if (y >= $($(this).attr('href')).offset().top - 99) {
+      //               $('.section-link').not(this).removeClass('active');
+      //               $(this).addClass('active');
+      //           }
+      //       });
+      //
+      //   });
+      //
+      //
+      //   $('#slides').superslides();
+      // });
     </script>
 
   </head>
@@ -79,10 +93,12 @@
     <div class="site-wrapper main">
       <div class="sections-menu">
         <img class="logo" src="./images/logo.png"/>
-        <div class="nav">
-          <a class="section-link js-nav-btn" href="about-us-id">[OUR_SOTORY]</a>
-          <a class="section-link js-nav-btn" href="gallery-id">[GALLERY]</a>
-          <a class="section-link js-nav-btn" href="about-us-id">[BRIDAL_PARTY]</a>
+        <div class="nav-menu">
+          <a class="section-link js-nav-btn" href="#about-us-id">[OUR_SOTORY]</a>
+          <a class="section-link js-nav-btn" href="#slides">[GALLERY]</a>
+          <!-- <a class="section-link js-nav-btn" href="bridal-party-id">[BRIDAL_PARTY]</a> -->
+          <a class="section-link js-nav-btn" href="#section-one-id">[section_1]</a>
+          <a class="section-link js-nav-btn" href="#section-two-id">[section_2]</a>
         </div>
       </div>
 
@@ -115,9 +131,16 @@
 
       <div id="slides" class="wrapper gallery-wrapper">
         <div class="slides-container">
-          <img src="./images/H&D-0001.jpg" alt="">
-          <img src="./images/H&D-0063.jpg" alt="">
-          <img src="./images/gijon-letronas.jpg" alt="">
+          <img src="./images/gallery-1.jpg" alt="">
+          <img src="./images/gallery-2.jpg" alt="">
+          <img src="./images/gallery-3.jpg" alt="">
+          <img src="./images/gallery-4.jpg" alt="">
+          <img src="./images/gallery-5.jpg" alt="">
+          <img src="./images/gallery-6.jpg" alt="">
+          <img src="./images/gallery-7.png" alt="">
+          <img src="./images/gallery-8.jpg" alt="">
+          <img src="./images/gallery-9.jpg" alt="">
+          <img src="./images/gallery-10.jpg" alt="">
         </div>
 
         <nav class="slides-navigation">
@@ -129,6 +152,13 @@
           </a>
         </nav>
       </div>
+      <div id="section-one-id" class="wrapper section-one">
+        <div class="section-one"/>
+      </div>
+
+      <div id="section-two-id" class="wrapper section-two">
+        <div class="section-two"/>
+      </div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -137,7 +167,7 @@
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      r.parentNode.insertBefore(e,r) }(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 

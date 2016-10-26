@@ -3,6 +3,11 @@
   src: URL('fonts/mf-i-love-glitter.ttf') format ('ttf');
 }
 
+@font-face {
+  font-family: 'DK Mango Smoothie';
+  src: URL('fonts/dk-mango-smoothie.otf') format ('otf');
+}
+
 
 
 body {
@@ -54,7 +59,8 @@ body {
   padding: 0 10px;
 
   text-decoration: none;
-  font-family: 'Mf I Love Glitter';
+  // font-family: 'Mf I Love Glitter';
+  font-family: 'DK Mango Smoothie';
   color: #D8D8D8;
   font-size: 20px;
 }

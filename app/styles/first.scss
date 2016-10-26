@@ -39,6 +39,11 @@ body {
   // float:left;
 }
 
+.icon {
+  width: 75px;
+  height: 75px;
+}
+
 .nav-menu {
 //  float:right;
   margin-right:10px;
@@ -156,30 +161,36 @@ body {
   // top: 50vh;
   // align-items: center;
   // justify-content: center;
-
-
 }
 
 .about-us__options__meet {
-  width: 100%;
-}
-
-.about-us__icon-left {
   position: absolute;
   top: 150vh;
   left: calc(25vw - 26px);
 }
 
-.about-us__icon-center {
+.about-us__options__love {
   position: absolute;
   top: 150vh;
   left: calc(50vw - 26px);
 }
 
-.about-us__icon-right {
+.about-us__options__porposal {
   position: absolute;
   top: 150vh;
   right: calc(25vw - 26px);
+}
+
+.about-us__icon {
+  width: 100px;
+  height: 100px;
+
+  border: 2px solid #fff;
+  border-radius: 50px;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .picture {

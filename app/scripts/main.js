@@ -3,7 +3,7 @@ console.log('\'Allo \'Allo!');
 // LOADING
 // Wait for window load
 // $(window).load(function() {
-$(window).on(‘load’, function() {
+$(window).on('load', function() {
 	// Animate loader off screen
 	$(".se-pre-con").fadeOut("slow");;
 });
@@ -104,7 +104,7 @@ function ourStoryAnimationApply() {
   'use strict';
   console.log('I`m here!');
 
-  let iconClicked = this.classList[0].split('-')[2];
+  let iconClicked = this.classList[0].split('__')[2];
 
   let lightbox = $('.lightbox');
   let optionsMenu = $('.about-us__options');

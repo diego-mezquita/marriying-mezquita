@@ -1,3 +1,8 @@
+$circle-wapper-size: 100px;
+$half-circle-wapper-size: calc(#{$circle-wapper-size} / 2);
+$icon-higher-position: 120vh;
+$icon-lower-position: 150vh;
+
 @font-face {
   font-family: 'Mf I Love Glitter';
   src: URL('fonts/mf-i-love-glitter.ttf') format ('ttf');
@@ -7,8 +12,6 @@
   font-family: 'DK Mango Smoothie';
   src: URL('fonts/dk-mango-smoothie.otf') format ('otf');
 }
-
-
 
 body {
   padding: 0px;
@@ -185,27 +188,27 @@ if it's not present, don't show loader */
 .about-us__options__meet {
   position: absolute;
   top: 150vh;
-  left: calc(25vw - 26px);
+  left: calc(25vw - #{$half-circle-wapper-size});
 }
 
 .about-us__options__love {
   position: absolute;
   top: 150vh;
-  left: calc(50vw - 26px);
+  left: calc(50vw - #{$half-circle-wapper-size});
 }
 
 .about-us__options__porposal {
   position: absolute;
   top: 150vh;
-  right: calc(25vw - 26px);
+  right: calc(25vw - #{$half-circle-wapper-size});
 }
 
 .about-us__icon {
-  width: 100px;
-  height: 100px;
+  width: #{$circle-wapper-size};
+  height: #{$circle-wapper-size};
 
   border: 2px solid #fff;
-  border-radius: 50px;
+  border-radius: #{$half-circle-wapper-size};
 
   // display: flex;
   // justify-content: center;
@@ -298,12 +301,12 @@ if it's not present, don't show loader */
 	-moz-border-radius: 10px;
 }
 
-.lightbox--is-left {
+.lightbox--is-meet {
   // visibility: hidden;
   display: inline-block;;
 }
 
-.lightbox--is-left::before {
+.lightbox--is-meet::before {
   content: ' ';
 	position: absolute;
 	width: 0;
@@ -317,12 +320,12 @@ if it's not present, don't show loader */
   // visibility: hidden;
 }
 
-.lightbox--is-center {
+.lightbox--is-love {
   // visibility: hidden;
   display: inline-block;;
 }
 
-.lightbox--is-center::before {
+.lightbox--is-love::before {
   content: ' ';
 	position: absolute;
 	width: 0;
@@ -336,12 +339,12 @@ if it's not present, don't show loader */
   // visibility: hidden;
 }
 
-.lightbox--is-right {
+.lightbox--is-porposal {
   // visibility: hidden;
   display: inline-block;;
 }
 
-.lightbox--is-right::before {
+.lightbox--is-porpousal::before {
   content: ' ';
 	position: absolute;
 	width: 0;
@@ -422,10 +425,10 @@ if it's not present, don't show loader */
 @-webkit-keyframes animation_up {
   0%   {
     // justify-content: center;
-    top: 150vh;
+    top: #{$icon-lower-position};
   }
   100% {
-    top: 120vh;
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -433,10 +436,10 @@ if it's not present, don't show loader */
 @-webkit-keyframes animation_up {
   0%   {
     // justify-content: center;
-    top: 150vh;
+    top: #{$icon-lower-position};
   }
   100% {
-    top: 120vh;
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -445,12 +448,12 @@ if it's not present, don't show loader */
 @keyframes animation_left {
   0%   {
     // justify-content: center;
-    left: calc(25vw - 26px);
-    top: 150vh;
+    left: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    left: calc(7vw - 26px);
-    top: 120vh;
+    left: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -458,12 +461,12 @@ if it's not present, don't show loader */
 @keyframes animation_left {
   0%   {
     // justify-content: center;
-    left: calc(25vw - 26px);
-    top: 150vh;
+    left: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    left: calc(7vw - 26px);
-    top: 120vh;
+    left: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -472,12 +475,12 @@ if it's not present, don't show loader */
 @-webkit-keyframes animation_right {
   0%   {
     // justify-content: center;
-    right: calc(25vw - 26px);
-    top: 150vh;
+    right: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    right: calc(7vw - 26px);
-    top: 120vh;
+    right: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -485,12 +488,12 @@ if it's not present, don't show loader */
 @-webkit-keyframes animation_right {
   0%   {
     // justify-content: center;
-    right: calc(25vw - 26px);
-    top: 150vh;
+    right: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    right: calc(7vw - 26px);
-    top: 120vh;
+    right: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }

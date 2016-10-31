@@ -2,6 +2,7 @@ $circle-wapper-size: 100px;
 $half-circle-wapper-size: calc(#{$circle-wapper-size} / 2);
 $icon-higher-position: 120vh;
 $icon-lower-position: 150vh;
+$lightbox-color: rgba(255, 255, 255, 0.6);
 
 @font-face {
   font-family: 'Mf I Love Glitter';
@@ -163,7 +164,7 @@ if it's not present, don't show loader */
 .about-us-wrapper {
   padding: 0 5vw;
 
-  background: url("../images/H&D-0063.jpg");//#404244;
+  background: url("../images/H&D-0064.jpg");//#404244;
   background-size: cover;
   // z-index: 2;
 }
@@ -279,16 +280,29 @@ if it's not present, don't show loader */
 
 /* CSS talk bubble */
 .lightbox {
-	margin: 40px;
+	// margin: 40px;
   display: none;
   position: relative;
 	// width: 200px;
 	// height: auto;
   top: 10vh;
-  width: 86vw;
-	height: 60vh;
-	background-color: #fff;
+  width: calc(100vw - #{$circle-wapper-size});
+	height: 50vh;
+	background-color: #{$lightbox-color};
   opacity: 0.6;
+}
+
+.lightbox__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px;
+}
+
+.lightbox__text p:first-child {
+  font-size: 30px;
+  font-family: 'DK Mango Smoothie';
+  padding-top: 30px;
 }
 
 .border{
@@ -315,7 +329,7 @@ if it's not present, don't show loader */
 	right: auto;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent transparent transparent #fff;
+	border-color: transparent transparent transparent #{$lightbox-color};
   z-index: -1;
   // visibility: hidden;
 }
@@ -334,7 +348,7 @@ if it's not present, don't show loader */
   right: 42vw;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent transparent #fff transparent;
+	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
   // visibility: hidden;
 }
@@ -344,7 +358,7 @@ if it's not present, don't show loader */
   display: inline-block;;
 }
 
-.lightbox--is-porpousal::before {
+.lightbox--is-porposal::before {
   content: ' ';
 	position: absolute;
 	width: 0;
@@ -353,7 +367,7 @@ if it's not present, don't show loader */
 	right: 0;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent #fff transparent transparent;
+	border-color: transparent #{$lightbox-color} transparent transparent;
   z-index: -1;
   // visibility: hidden;
 }

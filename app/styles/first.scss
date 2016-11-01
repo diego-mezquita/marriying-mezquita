@@ -49,8 +49,9 @@ if it's not present, don't show loader */
   visibility: hidden;
   z-index: 99999;
 
-  background: #606264;
-  opacity: 0.4;
+  // background: #606264;
+  // opacity: 0.4;
+  background: rgba(96,98,100,0.4);
 }
 
 .logo {
@@ -91,6 +92,7 @@ if it's not present, don't show loader */
   font-family: 'DK Mango Smoothie';
   color: #D8D8D8;
   font-size: 20px;
+  padding-top: 5px;
 }
 
 .section-link:hover {
@@ -100,16 +102,9 @@ if it's not present, don't show loader */
 
 .section-link.active-link {
   color: #fff;
-  background: #4a9529;
-
-}
-
-.section-one {
-  background: red;
-}
-
-.section-two {
-  background: yellow;
+  background: rgba(0,0,0,0.4);
+  border-radius: 25px;
+  // opacity: 0.5;
 }
 
 .site-wrapper {
@@ -148,9 +143,10 @@ if it's not present, don't show loader */
 }
 
 .title {
-  font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  font-family: 'Mf I Love Glitter', 'DK Mango Smoothie'; //Oldtown, fantasy;
   font-size: 100px;
   color: white;
+  padding-top: 35px;
 }
 
 .subtitle {
@@ -190,6 +186,7 @@ if it's not present, don't show loader */
   position: absolute;
   top: 150vh;
   left: calc(25vw - #{$half-circle-wapper-size});
+  margin-left: 20px;
 }
 
 .about-us__options__love {
@@ -198,10 +195,20 @@ if it's not present, don't show loader */
   left: calc(50vw - #{$half-circle-wapper-size});
 }
 
+.icon-love {
+  padding-right: 5px;
+}
+
+.icon-map {
+  height: 94px;
+  width: 60px;
+}
+
 .about-us__options__porposal {
   position: absolute;
   top: 150vh;
   right: calc(25vw - #{$half-circle-wapper-size});
+  margin-right: 10px;
 }
 
 .about-us__icon {
@@ -215,6 +222,74 @@ if it's not present, don't show loader */
   // justify-content: center;
   // align-items: center;
 }
+
+.festivities-wrapper {
+  background: url("../images/castle.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 5vw;
+  z-index: -2;
+}
+
+.festivities__options {
+  width: 90vw;
+  height: 6vh;
+}
+
+.festivities__options__ireland {
+  position: absolute;
+  top: 350vh;
+  left: calc(25vw - #{$half-circle-wapper-size});
+  margin-left: 20px;
+}
+
+.festivities__options__ceremony {
+  position: absolute;
+  top: 350vh;
+  left: calc(50vw - #{$half-circle-wapper-size});
+}
+
+.festivities__options__there {
+  position: absolute;
+  top: 350vh;
+  right: calc(25vw - #{$half-circle-wapper-size});
+  margin-right: 10px;
+}
+
+.festivities__icon {
+  width: #{$circle-wapper-size};
+  height: #{$circle-wapper-size};
+
+  border: 2px solid #fff;
+  border-radius: #{$half-circle-wapper-size};
+
+  position: fixed;
+  top: 50vh;
+  z-index: -1;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.festivities__title {
+  position: fixed;
+  top: 0vh;
+  z-index: -1;
+
+}
+
+.travel-wrapper {
+  background: url("../images/H&D-0157.jpg");
+  background-size: cover;
+  padding: 0 5vw;
+}
+
+.coming-soon {
+  // content: '[comming soon]'
+  padding-top: 50vh;
+}
+
 
 .picture {
   display: none;
@@ -280,27 +355,34 @@ if it's not present, don't show loader */
 
 /* CSS talk bubble */
 .lightbox {
-	// margin: 40px;
   display: none;
   position: relative;
-	// width: 200px;
-	// height: auto;
-  top: 10vh;
-  width: calc(100vw - #{$circle-wapper-size});
+  top: 8vh;
+  // margin-top: 15px;
+  // width: calc(100vw - #{$circle-wapper-size});
+  width: 100%;
 	height: 50vh;
 	background-color: #{$lightbox-color};
   opacity: 0.6;
+}
+
+.lightbox__scroll {
+  width: 100%;
+  height: 100%;
 }
 
 .lightbox__text {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   text-align: center;
-  margin: 20px;
+  padding: 0 40px 20px;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .lightbox__text p:first-child {
-  font-size: 30px;
+  font-size: 50px;
   font-family: 'DK Mango Smoothie';
   padding-top: 30px;
 }
@@ -325,11 +407,12 @@ if it's not present, don't show loader */
 	position: absolute;
 	width: 0;
 	height: 0;
-  top: -20px;
+  top: -44px;
+  left: 20px;
 	right: auto;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent transparent transparent #{$lightbox-color};
+	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
   // visibility: hidden;
 }
@@ -344,9 +427,9 @@ if it's not present, don't show loader */
 	position: absolute;
 	width: 0;
 	height: 0;
-  top: -43px;
-  right: 42vw;
-	bottom: auto;
+  top: -44px;
+  left: calc(50% - calc(22px / 2));
+  bottom: auto;
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
@@ -355,7 +438,7 @@ if it's not present, don't show loader */
 
 .lightbox--is-porposal {
   // visibility: hidden;
-  display: inline-block;;
+  display: inline-block;
 }
 
 .lightbox--is-porposal::before {
@@ -363,11 +446,11 @@ if it's not present, don't show loader */
 	position: absolute;
 	width: 0;
 	height: 0;
-  top: -20px;
-	right: 0;
+  top: -44px;
+	right: 20px;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent #{$lightbox-color} transparent transparent;
+	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
   // visibility: hidden;
 }

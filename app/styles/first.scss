@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Homemade+Apple|Princess+Sofia');
+
+// CSS Rules
+// font-family: 'Amatic SC', cursive;
+// font-family: 'Homemade Apple', cursive;
+// font-family: 'Princess Sofia', cursive;
+
 $circle-wapper-size: 100px;
 $half-circle-wapper-size: calc(#{$circle-wapper-size} / 2);
 $icon-higher-position: 120vh;
@@ -40,14 +47,16 @@ if it's not present, don't show loader */
 // http://stackoverflow.com/questions/8449272/how-can-i-make-a-menubar-fixed-on-the-top-while-scrolling
 // Double-check it: remove floats, use classes instead of HTML elements, maybe different alignment
 .sections-menu {
-  width:100%;
-  height:50px;
-  display:flex;
-  position:fixed;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   visibility: hidden;
   z-index: 99999;
+  justify-content: center;
+  align-items: center;
 
   // background: #606264;
   // opacity: 0.4;
@@ -55,11 +64,15 @@ if it's not present, don't show loader */
 }
 
 .logo {
-  width: 52px;
-  height: 52px;
+  width: 30px;
+  height: 30px;
   // float:left;
 }
 
+.menu-logo {
+  transform: rotate(37deg);
+  opacity: 0.6;
+}
 .icon {
   width: 75px;
   height: 75px;
@@ -72,7 +85,7 @@ if it's not present, don't show loader */
 //  float:right;
   margin-right:10px;
   width: calc(100vw - 52px - 10px); //52px: .logo width; 10px: .nav margin-right
-  height: 50px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,10 +102,10 @@ if it's not present, don't show loader */
 
   text-decoration: none;
   // font-family: 'Mf I Love Glitter';
-  font-family: 'DK Mango Smoothie';
+  // font-family: 'DK Mango Smoothie';
+  font-family: 'Amatic SC', cursive;
   color: #D8D8D8;
-  font-size: 20px;
-  padding-top: 5px;
+  font-size: 25px;
 }
 
 .section-link:hover {
@@ -136,23 +149,27 @@ if it's not present, don't show loader */
 }
 
 .main-title {
-  margin-top:  2%;
+  margin-top: 2%;
   max-width: 800px;
   position: fixed;
   // z-index: 0;
 }
 
 .title {
-  font-family: 'Mf I Love Glitter', 'DK Mango Smoothie'; //Oldtown, fantasy;
+  // font-family: 'Mf I Love Glitter', 'DK Mango Smoothie'; //Oldtown, fantasy;
+  // font-family: 'Homemade Apple', cursive:
+  font-family: 'Princess Sofia', cursive;
   font-size: 100px;
   color: white;
-  padding-top: 35px;
+  padding-top: 45px;
 }
 
 .subtitle {
   padding-top: 45px;
 
-  font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  // font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  // font-family: 'Homemade Apple', cursive;
+  font-family: 'Princess Sofia', cursive;
   font-size: 40px;
   color: white;
 }
@@ -288,6 +305,9 @@ if it's not present, don't show loader */
 .coming-soon {
   // content: '[comming soon]'
   padding-top: 50vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 
@@ -383,7 +403,8 @@ if it's not present, don't show loader */
 
 .lightbox__text p:first-child {
   font-size: 50px;
-  font-family: 'DK Mango Smoothie';
+  // font-family: 'DK Mango Smoothie';
+  font-family: 'Amatic SC', cursive;
   padding-top: 30px;
 }
 

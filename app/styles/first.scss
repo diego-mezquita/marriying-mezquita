@@ -7,7 +7,7 @@
 
 $circle-wapper-size: 100px;
 $half-circle-wapper-size: calc(#{$circle-wapper-size} / 2);
-$icon-higher-position: 120vh;
+$icon-higher-position: 122vh;
 $icon-lower-position: 150vh;
 $lightbox-color: rgba(255, 255, 255, 0.6);
 
@@ -618,10 +618,36 @@ if it's not present, don't show loader */
 
 // SUPERSLIDES PAGINATOR css.
 //  It was not being recognised in the published version
-slides-pagination {
+.slides-navigation {
+  margin: 0 auto;
   position: absolute;
   z-index: 3;
-  bottom: 0;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 1.5vw;
+  background-image: url("../images/arrow_left_white.png");
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+.slides-navigation a.next {
+  background-image: url("../images/arrow_right_white.png");
+  background-size: cover;
+  right: 1.5vw;
+  width: 100px;
+  height: 100px;
+}
+
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 3vh;
   text-align: center;
   width: 100%;
 }
@@ -644,3 +670,5 @@ slides-pagination {
 .slides-pagination a.current {
   background: #fff;
 }
+
+  // RESPONSIVE TOP NAVIGATION

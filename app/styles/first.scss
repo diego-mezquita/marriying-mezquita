@@ -1,6 +1,24 @@
+// @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Homemade+Apple|Princess+Sofia');
+
+// CSS Rules
+// font-family: 'Amatic SC', cursive;
+// font-family: 'Homemade Apple', cursive;
+// font-family: 'Princess Sofia', cursive;
+
+$circle-wapper-size: 100px;
+$half-circle-wapper-size: calc(#{$circle-wapper-size} / 2);
+$icon-higher-position: 122vh;
+$icon-lower-position: 150vh;
+$lightbox-color: rgba(255, 255, 255, 0.6);
+
 @font-face {
   font-family: 'Mf I Love Glitter';
   src: URL('fonts/mf-i-love-glitter.ttf') format ('ttf');
+}
+
+@font-face {
+  font-family: 'DK Mango Smoothie';
+  src: URL('fonts/dk-mango-smoothie.otf') format ('otf');
 }
 
 body {
@@ -9,40 +27,82 @@ body {
   background: #404246;
 }
 
+// LOADING
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+// .no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('/images/Preloader_5.gif') center no-repeat #fff;
+}
+
 // Code from StackOverflow - START
 // http://stackoverflow.com/questions/8449272/how-can-i-make-a-menubar-fixed-on-the-top-while-scrolling
 // Double-check it: remove floats, use classes instead of HTML elements, maybe different alignment
 .sections-menu {
-  width:100%;
-  height:50px;
-  display:block;
-  position:fixed;
-  top:0;
-  left:0;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
 
-  background: #606264;
-  opacity: 0.4;
+  // background: #606264;
+  // opacity: 0.4;
+  background: rgba(96,98,100,0.4);
 }
 
 .logo {
-  width: 52px;
-  height: 52px;
+  width: 30px;
+  height: 30px;
   // float:left;
 }
 
-.nav {
+.menu-logo {
+  transform: rotate(37deg);
+  opacity: 0.6;
+}
+.icon {
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+.nav-menu {
+
+}
+
+.nav-menu__option {
 //  float:right;
   margin-right:10px;
   width: calc(100vw - 52px - 10px); //52px: .logo width; 10px: .nav margin-right
-  height: 50px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 }
+
+.nav-menu li {
+  list-style-type: none;
+}
+
 .section-link {
-  list-style:none;
-  float:left;
+  list-style: none;
+  float: left;
 }
 // Code from StackOverflow - END
 
@@ -50,14 +110,24 @@ body {
   padding: 0 10px;
 
   text-decoration: none;
-  font-family: 'Mf I Love Glitter';
+  // font-family: 'Mf I Love Glitter';
+  // font-family: 'DK Mango Smoothie';
+  font-family: 'Amatic SC', cursive;
   color: #D8D8D8;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .section-link:hover {
   text-decoration: none;
   color: white;
+}
+
+.section-link.active-link {
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  border-radius: 25px;
+  padding: 0;
+  // opacity: 0.5;
 }
 
 .site-wrapper {
@@ -89,21 +159,27 @@ body {
 }
 
 .main-title {
-  margin-top:  2%;
+  margin-top: 2%;
   max-width: 800px;
   position: fixed;
+  // z-index: 0;
 }
 
 .title {
-  font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  // font-family: 'Mf I Love Glitter', 'DK Mango Smoothie'; //Oldtown, fantasy;
+  // font-family: 'Homemade Apple', cursive:
+  font-family: 'Princess Sofia', cursive;
   font-size: 100px;
   color: white;
+  padding-top: 45px;
 }
 
 .subtitle {
   padding-top: 45px;
 
-  font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  // font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
+  // font-family: 'Homemade Apple', cursive;
+  font-family: 'Princess Sofia', cursive;
   font-size: 40px;
   color: white;
 }
@@ -111,8 +187,9 @@ body {
 .about-us-wrapper {
   padding: 0 5vw;
 
-  background: url("../images/H&D-0063.jpg");//#404244;
+  background: url("../images/H&D-0064.jpg");//#404244;
   background-size: cover;
+  // z-index: 2;
 }
 
 .about-us {
@@ -130,31 +207,119 @@ body {
   // top: 50vh;
   // align-items: center;
   // justify-content: center;
-
-
 }
 
 .about-us__options__meet {
-  width: 100%;
+  position: absolute;
+  top: 150vh;
+  left: calc(25vw - #{$half-circle-wapper-size});
+  margin-left: 20px;
 }
 
-.about-us__icon-left {
+.about-us__options__love {
   position: absolute;
-  top: 50vh;
-  left: calc(25vw - 26px);
+  top: 150vh;
+  left: calc(50vw - #{$half-circle-wapper-size});
 }
 
-.about-us__icon-center {
-  position: absolute;
-  top: 50vh;
-  left: calc(50vw - 26px);
+.icon-love {
+  padding-right: 5px;
 }
 
-.about-us__icon-right {
-  position: absolute;
-  top: 50vh;
-  right: calc(25vw - 26px);
+.icon-map {
+  height: 94px;
+  width: 60px;
 }
+
+.about-us__options__porposal {
+  position: absolute;
+  top: 150vh;
+  right: calc(25vw - #{$half-circle-wapper-size});
+  margin-right: 10px;
+}
+
+.about-us__icon {
+  width: #{$circle-wapper-size};
+  height: #{$circle-wapper-size};
+
+  border: 2px solid #fff;
+  border-radius: #{$half-circle-wapper-size};
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.festivities-wrapper {
+  background: url("../images/castle.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0 5vw;
+  z-index: -2;
+}
+
+.festivities__options {
+  width: 90vw;
+  height: 6vh;
+}
+
+.festivities__options__ireland {
+  position: absolute;
+  top: 350vh;
+  left: calc(25vw - #{$half-circle-wapper-size});
+  margin-left: 20px;
+}
+
+.festivities__options__ceremony {
+  position: absolute;
+  top: 350vh;
+  left: calc(50vw - #{$half-circle-wapper-size});
+}
+
+.festivities__options__there {
+  position: absolute;
+  top: 350vh;
+  right: calc(25vw - #{$half-circle-wapper-size});
+  margin-right: 10px;
+}
+
+.festivities__icon {
+  width: #{$circle-wapper-size};
+  height: #{$circle-wapper-size};
+
+  border: 2px solid #fff;
+  border-radius: #{$half-circle-wapper-size};
+
+  position: fixed;
+  top: 50vh;
+  z-index: -1;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.festivities__title {
+  position: fixed;
+  top: 0vh;
+  z-index: -1;
+}
+
+.travel-wrapper {
+  background: url("../images/H&D-0157.jpg");
+  background-size: cover;
+  padding: 0 5vw;
+}
+
+.coming-soon {
+  // content: '[comming soon]'
+  padding-top: 50vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 3vw;
+}
+
 
 .picture {
   display: none;
@@ -220,16 +385,37 @@ body {
 
 /* CSS talk bubble */
 .lightbox {
-	margin: 40px;
   display: none;
   position: relative;
-	// width: 200px;
-	// height: auto;
-  top: 10vh;
-  width: 86vw;
-	height: 60vh;
-	background-color: #fff;
+  top: 8vh;
+  // margin-top: 15px;
+  // width: calc(100vw - #{$circle-wapper-size});
+  width: 100%;
+	height: 50vh;
+	background-color: #{$lightbox-color};
   opacity: 0.6;
+}
+
+.lightbox__scroll {
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 40px 20px;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox__text p:first-child {
+  font-size: 50px;
+  // font-family: 'DK Mango Smoothie';
+  font-family: 'Amatic SC', cursive;
+  padding-top: 30px;
 }
 
 .border{
@@ -242,59 +428,60 @@ body {
 	-moz-border-radius: 10px;
 }
 
-.lightbox--is-left {
+.lightbox--is-meet {
   // visibility: hidden;
   display: inline-block;;
 }
 
-.lightbox--is-left::before {
+.lightbox--is-meet::before {
   content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
-  top: -20px;
+  top: -44px;
+  left: 20px;
 	right: auto;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent transparent transparent #fff;
+	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
   // visibility: hidden;
 }
 
-.lightbox--is-center {
+.lightbox--is-love {
   // visibility: hidden;
   display: inline-block;;
 }
 
-.lightbox--is-center::before {
+.lightbox--is-love::before {
   content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
-  top: -43px;
-  right: 42vw;
-	bottom: auto;
+  top: -44px;
+  left: calc(50% - calc(22px / 2));
+  bottom: auto;
 	border: 22px solid;
-	border-color: transparent transparent #fff transparent;
+	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
   // visibility: hidden;
 }
 
-.lightbox--is-right {
+.lightbox--is-porposal {
   // visibility: hidden;
-  display: inline-block;;
+  display: inline-block;
 }
 
-.lightbox--is-right::before {
+.lightbox--is-porposal::before {
   content: ' ';
 	position: absolute;
 	width: 0;
 	height: 0;
-  top: -20px;
-	right: 0;
+  top: -44px;
+	right: 20px;
 	bottom: auto;
 	border: 22px solid;
-	border-color: transparent #fff transparent transparent;
+	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
   // visibility: hidden;
 }
@@ -366,10 +553,10 @@ body {
 @-webkit-keyframes animation_up {
   0%   {
     // justify-content: center;
-    top: 50vh;
+    top: #{$icon-lower-position};
   }
   100% {
-    top: 20vh;
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -377,10 +564,10 @@ body {
 @-webkit-keyframes animation_up {
   0%   {
     // justify-content: center;
-    top: 50vh;
+    top: #{$icon-lower-position};
   }
   100% {
-    top: 20vh;
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -389,12 +576,12 @@ body {
 @keyframes animation_left {
   0%   {
     // justify-content: center;
-    left: calc(25vw - 26px);
-    top: 50vh;
+    left: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    left: calc(7vw - 26px);
-    top: 20vh;
+    left: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -402,12 +589,12 @@ body {
 @keyframes animation_left {
   0%   {
     // justify-content: center;
-    left: calc(25vw - 26px);
-    top: 50vh;
+    left: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    left: calc(7vw - 26px);
-    top: 20vh;
+    left: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -416,12 +603,12 @@ body {
 @-webkit-keyframes animation_right {
   0%   {
     // justify-content: center;
-    right: calc(25vw - 26px);
-    top: 50vh;
+    right: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    right: calc(7vw - 26px);
-    top: 20vh;
+    right: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
 }
@@ -429,12 +616,309 @@ body {
 @-webkit-keyframes animation_right {
   0%   {
     // justify-content: center;
-    right: calc(25vw - 26px);
-    top: 50vh;
+    right: calc(25vw - #{$half-circle-wapper-size});
+    top: #{$icon-lower-position};
   }
   100% {
-    right: calc(7vw - 26px);
-    top: 20vh;
+    right: calc(7vw - #{$half-circle-wapper-size});
+    top: #{$icon-higher-position};
     // justify-content: flex-start;
   }
+}
+
+// SUPERSLIDES PAGINATOR css.
+//  It was not being recognised in the published version
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 1.5vw;
+  background-image: url("../images/arrow_left_white.png");
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+.slides-navigation a.next {
+  background-image: url("../images/arrow_right_white.png");
+  background-size: cover;
+  right: 1.5vw;
+  width: 100px;
+  height: 100px;
+}
+
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 3vh;
+  text-align: center;
+  width: 100%;
+}
+.slides-pagination a {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+  background: #fff;
+}
+
+// RESPONSIVE TOP NAVIGATION
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+// @media screen and (max-width:680px) {
+//   ul.nav-menu li:not(:first-child) {display: none;}
+//   ul.nav-menu li.icon {
+//     float: right;
+//     display: inline-block;
+//   }
+// }
+//
+// /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+// @media screen and (max-width:680px) {
+//   ul.nav-menu.responsive {position: relative;}
+//   ul.nav-menu.responsive li.icon {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//   }
+//   ul.nav-menu.responsive li {
+//     float: none;
+//     display: inline;
+//   }
+//   ul.nav-menu.responsive li a {
+//     display: block;
+//     text-align: left;
+//   }
+// }
+
+
+  /* Remove margins and padding from the list, and add a black background color */
+//   ul.topnav {
+//       list-style-type: none;
+//       margin: 0;
+//       padding: 0;
+//       overflow: hidden;
+//       background-color: #333;
+//   }
+//
+//   /* Float the list items side by side */
+//   ul.topnav li {float: left;}
+//
+//   /* Style the links inside the list items */
+//   ul.topnav li a {
+//       display: inline-block;
+//       color: #f2f2f2;
+//       text-align: center;
+//       padding: 14px 16px;
+//       text-decoration: none;
+//       transition: 0.3s;
+//       font-size: 17px;
+//   }
+//
+//   /* Change background color of links on hover */
+//   ul.topnav li a:hover {background-color: #555;}
+//
+//   /* Hide the list item that contains the link that should open and close the topnav on small screens */
+//   ul.topnav li.icon {display: none;}
+//
+//   /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+// @media screen and (max-width:680px) {
+//   ul.topnav li:not(:first-child) {display: none;}
+//   ul.topnav li.icon {
+//     float: right;
+//     display: inline-block;
+//   }
+// }
+//
+// /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+// @media screen and (max-width:680px) {
+//   ul.topnav.responsive {position: relative;}
+//   ul.topnav.responsive li.icon {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//   }
+//   ul.topnav.responsive li {
+//     float: none;
+//     display: inline;
+//   }
+//   ul.topnav.responsive li a {
+//     display: block;
+//     text-align: left;
+//   }
+// }
+
+
+// Menu Colours
+$text-color: #eee;
+$menu-bg: #333;
+$menu-hover: #444;
+$menu-border: #555;
+//
+// body {
+//   font-family: 'PT Sans Narrow', sans-serif;
+//   background-color: $text-color;
+//   background-image: url('http://i.cubeupload.com/NjsJx8.png');
+//   margin: 0;
+// }
+
+// h1 {
+// 	font-size: 4em;
+// 	font-family: 'PT Sans Narrow', sans-serif;
+// 	line-height: 1.1;
+//   text-align: center;
+//   padding: 10px;
+// }
+//
+// p {
+//   font-size: 1.2em;
+//   text-align: center;
+//   padding: 10px;
+// }
+
+.nav-menu {
+  //top: 0; // Fix the menu to the top
+  //position: fixed; // Fix the menu to the top
+  height: 40px;
+	width: 100%;
+  // background-color: $menu-bg;
+  color: $text-color;
+
+  ul {
+    padding: 0;
+	  margin: 0;
+  }
+
+  li {
+    display: inline;
+    float: left;
+  }
+
+  a {
+  	display: inline-block;
+	  width: 100px;
+	  text-align: center;
+	  text-decoration: none;
+	  padding: 10px 0;
+    color: $text-color;
+    text-decoration:none;
+  }
+
+  li:hover {
+    // background-color: $menu-hover;
+  }
+
+  a#openup {
+	  display: none;
+  }
+} //nav
+
+@media screen and (max-width: 680px) {
+  // h1 {
+	//   font-size: 2.8em;
+  // }
+
+  .sections-menu {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .section-link {
+    // border-radius: 0;
+  }
+
+  .section-link.active-link {
+    border-radius: 0px;
+  }
+
+  .nav-menu__option {
+    width: 100%;
+  }
+
+  .nav-menu {
+		height: auto;
+		border-bottom: 0;
+
+	  ul {
+		  display: none;
+		  height: auto;
+	  }
+
+	  li {
+		  width: 100%;
+		  float: left;
+		  position: relative;
+
+    }
+
+    li:hover {
+      // background-color: transparent;
+    }
+
+  	a {
+	  	text-align: left;
+	  	width: 100%;
+	  	text-indent: 25px;
+			// background: $menu-bg;
+      // border-bottom: 1px solid $menu-border;
+  	}
+
+  	//  a:hover {
+	  // 	background: rgba(68, 68, 68, 0.6);
+  	// }
+
+	  a#openup:after {
+		  content:"|||";
+      transform:rotate(-90deg);
+      -ms-transform:rotate(-90deg); /* IE 9 */
+      -webkit-transform:rotate(-90deg); /* Safari and Chrome */
+		  width: 30px;
+		  height: 30px;
+		  display: inline-block;
+		  position: absolute;
+		  right: 3%;
+		  top: 50%;
+      color: #fff;
+	  }
+
+	  a#openup {
+		  display: block;
+		  // background-color: $menu-bg;
+		  width: 100%;
+		  position: relative;
+      border-radius: 0;
+	  }
+  } //nav
+
+  .menu-logo {
+    display: none;
+  }
+
+} // media
+
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; } /* For IE 6/7 (trigger hasLayout) */
+
+
+.nav-menu {
+
 }

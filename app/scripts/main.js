@@ -21,9 +21,9 @@ $(document).ready(function () {
     $(document).off('scroll');
 
     $('a').each(function () {
-        $(this).removeClass('active-link');
+        $(this).removeClass('active-link js-active-link');
     })
-    $(this).addClass('active-link');
+    $(this).addClass('active-link js-active-link');
 
     var target = this.hash,
       menu = target;
@@ -43,11 +43,11 @@ function onScroll(event){
     var currLink = $(this);
     var refElement = $(currLink.attr('href'));
     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-      $('.sections-menu nav-menu a').removeClass('active-link');
-      currLink.addClass('active-link');
+      $('.sections-menu nav-menu a').removeClass('active-link js-active-link');
+      currLink.addClass('active-link js-active-link');
     }
     else{
-      currLink.removeClass('active-link');
+      currLink.removeClass('active-link js-active-link');
     }
   });
 }
@@ -104,6 +104,20 @@ const lightboxTexts = {
 	'love': '<div class="lightbox__text"><p>How we started dating</p><p>It all started at the water tank. Well, sort of. We spent months and months slowly getting to know each other, mostly smiling at each other and finding excuses here and there to talk.</p><p>It wasn’t until we decided to grab a drink together after a long week at work that things really began. I don’t think either of us were really considering our first date to be an actual date or at least not in the beginning. We were both cautious, but after hours of getting lost in conversation, we quickly realized things felt right and from that point on we were inseparable.</p></div>',
 	'porposal': '<div class="lightbox__text"><p>The Proposal</p><p>(Diego) If you know Holly, you know she is always on. So imagine trying to pull one over on her - it was no easy feat. It all started a few months before the proposal itself. I wanted to do things right, so I skyped with my future in-laws and asked them for their daughter’s hand in marriage. Holly who was supposed to be out for a run, cut her morning routine short and almost walked in on the big moment. Luckily her parents said “yes” just in time for me to hang up as Holly asked who I was talking to.</p><p>With the help of a few close friends and Holly’s sister, Stacey, we planned a proposal that we knew Holly would love. She had just bought a red dress, but she had never worn it so we came up with a plan for Stacey to invite her to a party for the local soccer team, Sporting (their colors are red and white). She was a bit hesitant, soccer isn’t her thing, but knowing that the party meant a lot to her sister she threw on the dress and got ready for a night out.</p><p>(Holly) Something was up. From the moment Stacey and Carlos came to pick me up for the Sporting Party, Stacey was acting a bit goofy and made me listen to a special soundtrack in the car, which included “Lady in red”... On the way over, I asked a few times where the party was and they claimed it was at a big house, so when we arrived at a park I was pretty suspicious.</p><p>Stacey kept repeating “I guess we got here first…” and they were taking an odd amount of pictures of me…Just as we were rounding a corner my sister told me to look up a little hill. There was a path that was lit with cute little lanterns and at the top of the hill I saw Diego. Our friends Laura and Berti were ducking around the corner. They played John Legend’s “All of me” as I made my way up to Diego. Cancio was also there, but doing his best to stay out of sight so he could record this special moment.</p><p>(Diego) I anxiously told her the words I’d practiced what must have been a hundred, if not a thousand times. I’ve never been so nervous before in my life. This was the most important question I’d ever ask. I got down on one knee, said her full name (my future sister-in-law gave me some good, American approved advice there) and I had champagne chilling, ready to toast.</p><p>(Holly) I wanted to freeze this moment in time. Just as I said "yes", our closest friends came out from where they’d been hiding to congratulate us, but everyone disappeared quickly, supposedly to give us our space. Diego was far from done though, he had a full 4-course dinner, champagne, and my favorite wine ready to enjoy while overlooking the ocean.</p><p>To make the night even more memorable, he rented a house and invited more friends to meet us there to celebrate a surprise engagement party. I was actually so busy staring at the ring and taking it all in that I didn’t even question why we had driven so far from the city or why we were going to a random house. I walked into another beautiful surprise. It was a night I’ll never forget.</p></div>'
 };
+
+$('.js-open-menu').click(function () {
+	const active = $('.js-nav-menu--options').find('.js-active-link');
+	// const linkTo = !active[0].href ?  : active[0].href.split('#');
+
+	if(!!active.href) {
+		$('.js-open-menu').attr('href', active[0].href);
+		return;
+	}
+
+  return;
+	// $("#linkId").attr("href", "http://the.new.url");
+
+});
 
 function setLightboxText(iconClicked) {
 	const lightboxText = $('.js-lightbox-text');
@@ -170,3 +184,51 @@ $(window).scroll(function () {
 $('.js-meet-click').click(ourStoryAnimationApply);
 $('.js-love-click').click(ourStoryAnimationApply);
 $('.js-porposal-click').click(ourStoryAnimationApply);
+
+  // RESPONSIVE TOP NAVIGATION
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+// function myFunction() {
+//     var x = document.getElementsById('myTopnav');
+//     if (x.className === "nav-menu") {
+//         x.className += " responsive";
+//     } else {
+//         x.className = "nav-menu";
+//     }
+// }
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+// function myFunction() {
+//     var x = document.getElementById("myTopnav");
+//     if (x.className === "topnav") {
+//         x.className += " responsive";
+//     } else {
+//         x.className = "topnav";
+//     }
+// }
+
+$(function() {
+	const menu = $('nav ul');
+
+  $('#openup').on('click', function(e) {
+    e.preventDefault();
+		menu.slideToggle();
+  });
+
+  // $(window).resize(function(){
+  //   var w = $(this).width();
+	//
+	// 	if(w > 680 && menu.is(':hidden')) {
+  //     menu.removeAttr('style');
+  //   }
+  // });
+
+  $('nav li').on('click', function(e) {
+    var w = $(window).width();
+
+		if(w < 680 ) {
+      menu.slideToggle();
+    }
+  });
+
+  $('.open-menu').height($(window).height());
+});

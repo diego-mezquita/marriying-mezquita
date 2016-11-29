@@ -47,16 +47,19 @@
 
     <!-- THIS IS THE WEBSITE HTML CODE -->
     <div class="site-wrapper main">
-      <div class="sections-menu">
+      <nav class="sections-menu cf nav-menu">
         <img class="logo menu-logo" src="./images/four-leaf-clover.svg"/>
-        <div class="nav-menu">
-          <a class="section-link js-nav-btn" href="#about-us-id">OUR STORY</a>
-          <a class="section-link js-nav-btn" href="#slides">GALLERY</a>
-          <!-- <a class="section-link js-nav-btn" href="bridal-party-id">BRIDAL_PARTY</a> -->
-          <a class="section-link js-nav-btn" href="#festivities-id">FESTIVITIES</a>
-          <a class="section-link js-nav-btn" href="#travel-id">TRAVEL</a>
-        </div>
-      </div>
+        <ul class="nav-menu__option cf js-nav-menu--options">
+          <li><a class="section-link js-nav-btn" href="#about-us-id">OUR STORY</a></li>
+          <li><a class="section-link js-nav-btn" href="#slides">GALLERY</a></li>
+          <li><a class="section-link js-nav-btn" href="#festivities-id">FESTIVITIES</a></li>
+          <li><a class="section-link js-nav-btn" href="#travel-id">TRAVEL</a></li>
+          <!-- <li class="icon"> -->
+            <!-- <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a> -->
+          <!-- </li> -->
+        </ul>
+        <a href="" class="js-open-menu section-link" id="openup">MENU</a>
+      </nav>
 
       <!-- <ul class="topnav" id="myTopnav">
         <li><a href="#">Welcome</a></li>
@@ -160,7 +163,7 @@
     </script>
 
     <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <!-- <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
@@ -171,7 +174,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script> -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->

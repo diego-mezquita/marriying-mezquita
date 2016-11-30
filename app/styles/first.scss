@@ -940,6 +940,22 @@ $text-color: #eee;
     right: calc(25vw - #{$half-circle-wrapper-size-mobile});
   }
 
+  .lightbox {
+    // top: 22vh;
+  }
+
+  .lightbox__text {
+    font-size: 15px;
+    padding: 0 10px 10px;
+  }
+
+  .lightbox__text p:first-child {
+    font-size: 30px;
+    // font-family: 'DK Mango Smoothie';
+    font-family: 'Amatic SC', cursive;
+    padding-top: 30px;
+  }
+
   /* Chrome, Safari, Opera */
   @-webkit-keyframes animation_up_au {
     0%   {
@@ -1100,7 +1116,7 @@ $text-color: #eee;
   }
 
   .lightbox__about-us--is-visible {
-    top: 16vh;
+    top: 22vh;
   }
 
 } // media

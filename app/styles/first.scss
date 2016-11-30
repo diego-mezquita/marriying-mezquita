@@ -5,8 +5,8 @@
 // font-family: 'Homemade Apple', cursive;
 // font-family: 'Princess Sofia', cursive;
 
-$circle-wapper-size: 100px;
-$half-circle-wapper-size: calc(#{$circle-wapper-size} / 2);
+$circle-wrapper-size: 100px;
+$half-circle-wrapper-size: calc(#{$circle-wrapper-size} / 2);
 $icon-higher-position: 122vh;
 $icon-lower-position: 150vh;
 $lightbox-color: rgba(255, 255, 255, 0.6);
@@ -212,14 +212,21 @@ if it's not present, don't show loader */
 .about-us__options__meet {
   position: absolute;
   top: 150vh;
-  left: calc(25vw - #{$half-circle-wapper-size});
-  margin-left: 20px;
+  left: calc(25vw - #{$half-circle-wrapper-size});
+  // margin-left: 20px;
 }
 
 .about-us__options__love {
   position: absolute;
   top: 150vh;
-  left: calc(50vw - #{$half-circle-wapper-size});
+  left: calc(50vw - #{$half-circle-wrapper-size});
+}
+
+.about-us__options__porposal {
+  position: absolute;
+  top: 150vh;
+  right: calc(25vw - #{$half-circle-wrapper-size});
+  // margin-right: 10px;
 }
 
 .icon-love {
@@ -231,23 +238,16 @@ if it's not present, don't show loader */
   width: 60px;
 }
 
-.about-us__options__porposal {
-  position: absolute;
-  top: 150vh;
-  right: calc(25vw - #{$half-circle-wapper-size});
-  margin-right: 10px;
-}
-
 .about-us__icon {
-  width: #{$circle-wapper-size};
-  height: #{$circle-wapper-size};
+  width: #{$circle-wrapper-size};
+  height: #{$circle-wrapper-size};
 
   border: 2px solid #fff;
-  border-radius: #{$half-circle-wapper-size};
+  border-radius: #{$half-circle-wrapper-size};
 
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .festivities-wrapper {
@@ -255,7 +255,6 @@ if it's not present, don't show loader */
   background-size: cover;
   background-attachment: fixed;
   padding: 0 5vw;
-  z-index: -2;
 }
 
 .festivities__options {
@@ -266,43 +265,39 @@ if it's not present, don't show loader */
 .festivities__options__ireland {
   position: absolute;
   top: 350vh;
-  left: calc(25vw - #{$half-circle-wapper-size});
-  margin-left: 20px;
+  left: calc(25vw - #{$half-circle-wrapper-size});
 }
 
 .festivities__options__ceremony {
   position: absolute;
   top: 350vh;
-  left: calc(50vw - #{$half-circle-wapper-size});
+  left: calc(50vw - #{$half-circle-wrapper-size});
 }
 
 .festivities__options__there {
   position: absolute;
   top: 350vh;
-  right: calc(25vw - #{$half-circle-wapper-size});
-  margin-right: 10px;
+  right: calc(25vw - #{$half-circle-wrapper-size});
 }
 
 .festivities__icon {
-  width: #{$circle-wapper-size};
-  height: #{$circle-wapper-size};
+  width: #{$circle-wrapper-size};
+  height: #{$circle-wrapper-size};
 
   border: 2px solid #fff;
-  border-radius: #{$half-circle-wapper-size};
+  border-radius: #{$half-circle-wrapper-size};
 
-  position: fixed;
-  top: 50vh;
-  z-index: -1;
+  // position: fixed;
+  // top: 50vh;
 
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .festivities__title {
-  position: fixed;
+  // position: fixed;
   top: 0vh;
-  z-index: -1;
 }
 
 .travel-wrapper {
@@ -389,7 +384,7 @@ if it's not present, don't show loader */
   position: relative;
   top: 8vh;
   // margin-top: 15px;
-  // width: calc(100vw - #{$circle-wapper-size});
+  // width: calc(100vw - #{$circle-wrapper-size});
   width: 100%;
 	height: 50vh;
 	background-color: #{$lightbox-color};
@@ -508,7 +503,6 @@ if it's not present, don't show loader */
 }
 
 // OUR STORY ANIMATIONS -------
-
 .about-us__icon--is-animation {
     // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
@@ -552,77 +546,109 @@ if it's not present, don't show loader */
 /* Chrome, Safari, Opera */
 @-webkit-keyframes animation_up {
   0%   {
-    // justify-content: center;
     top: #{$icon-lower-position};
   }
   100% {
     top: #{$icon-higher-position};
-    // justify-content: flex-start;
-  }
-}
-
-@-webkit-keyframes animation_up {
-  0%   {
-    // justify-content: center;
-    top: #{$icon-lower-position};
-  }
-  100% {
-    top: #{$icon-higher-position};
-    // justify-content: flex-start;
   }
 }
 
 /* Standard syntax */
 @keyframes animation_left {
   0%   {
-    // justify-content: center;
-    left: calc(25vw - #{$half-circle-wapper-size});
+    left: calc(25vw - #{$half-circle-wrapper-size});
     top: #{$icon-lower-position};
   }
   100% {
-    left: calc(7vw - #{$half-circle-wapper-size});
+    left: calc(10vw - #{$half-circle-wrapper-size});
     top: #{$icon-higher-position};
-    // justify-content: flex-start;
-  }
-}
-
-@keyframes animation_left {
-  0%   {
-    // justify-content: center;
-    left: calc(25vw - #{$half-circle-wapper-size});
-    top: #{$icon-lower-position};
-  }
-  100% {
-    left: calc(7vw - #{$half-circle-wapper-size});
-    top: #{$icon-higher-position};
-    // justify-content: flex-start;
   }
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes animation_right {
   0%   {
-    // justify-content: center;
-    right: calc(25vw - #{$half-circle-wapper-size});
+    right: calc(25vw - #{$half-circle-wrapper-size});
     top: #{$icon-lower-position};
   }
   100% {
-    right: calc(7vw - #{$half-circle-wapper-size});
+    right: calc(10vw - #{$half-circle-wrapper-size});
     top: #{$icon-higher-position};
-    // justify-content: flex-start;
   }
 }
 
-@-webkit-keyframes animation_right {
+// OUR STORY ANIMATIONS -------
+.festivities__icon--is-animation {
+    // position: relative;
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.festivities__icon--is-animationZZZZ {
+    // position: relative;
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.festivities__icon--is-animation-up {
+  -webkit-animation-name: animation_up; /* Chrome, Safari, Opera */
+  animation-name: animation_up;
+
+  animation-fill-mode: forwards;
+}
+
+.about-festivities__icon--is-animation-left {
+  -webkit-animation-name: animation_left; /* Chrome, Safari, Opera */
+  animation-name: animation_left;
+
+  animation-fill-mode: forwards;
+}
+
+.festivities__icon--is-animation-right {
+  -webkit-animation-name: animation_right; /* Chrome, Safari, Opera */
+  animation-name: animation_right;
+
+  // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  // animation-duration: 1s;
+  // animation-timing-function: ease-out;
+  // animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation_up {
   0%   {
-    // justify-content: center;
-    right: calc(25vw - #{$half-circle-wapper-size});
     top: #{$icon-lower-position};
   }
   100% {
-    right: calc(7vw - #{$half-circle-wapper-size});
     top: #{$icon-higher-position};
-    // justify-content: flex-start;
+  }
+}
+
+/* Standard syntax */
+@keyframes animation_left {
+  0%   {
+    left: calc(25vw - #{$half-circle-wrapper-size});
+    top: #{$icon-lower-position};
+  }
+  100% {
+    left: calc(10vw - #{$half-circle-wrapper-size});
+    top: #{$icon-higher-position};
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation_right {
+  0%   {
+    right: calc(25vw - #{$half-circle-wrapper-size});
+    top: #{$icon-lower-position};
+  }
+  100% {
+    right: calc(10vw - #{$half-circle-wrapper-size});
+    top: #{$icon-higher-position};
   }
 }
 
@@ -768,10 +794,12 @@ if it's not present, don't show loader */
 
 
 // Menu Colours
-$text-color: #eee;
+$circle-wrapper-size-mobile: 55px;
+$half-circle-wrapper-size-mobile: calc(#{$circle-wrapper-size-mobile} / 2);
 $menu-bg: #333;
-$menu-hover: #444;
 $menu-border: #555;
+$menu-hover: #444;
+$text-color: #eee;
 //
 // body {
 //   font-family: 'PT Sans Narrow', sans-serif;
@@ -835,6 +863,97 @@ $menu-border: #555;
   // h1 {
 	//   font-size: 2.8em;
   // }
+
+  .main-title {
+    margin-top: 2%;
+    max-width: 90vw;
+    position: fixed;
+    // z-index: 0;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .title-coming-soon {
+    display: block;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    // height: 100%;
+  }
+
+  .icon-map {
+    width: 37px;
+  }
+
+  .about-us__icon {
+    width: #{$circle-wrapper-size-mobile};
+    height: #{$circle-wrapper-size-mobile};
+    //
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  .about-us__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us__options__meet {
+    left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .about-us__options__love {
+    left: calc(50vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .about-us__options__porposal {
+    right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_up {
+    0%   {
+      top: #{$icon-lower-position};
+    }
+    100% {
+      top: #{$icon-higher-position};
+    }
+  }
+
+  @keyframes animation_left {
+    0%   {
+      left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position};
+    }
+    100% {
+      left: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position};
+    }
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_right {
+    0%   {
+      right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position};
+    }
+    100% {
+      right: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position};
+    }
+  }
+
+  .festivities-wrapper {
+    z-index: 5;
+  }
 
   .sections-menu {
     height: auto;
@@ -910,6 +1029,33 @@ $menu-border: #555;
 
   .menu-logo {
     display: none;
+  }
+
+  .festivities__options {
+
+  }
+
+  .festivities__options__ireland {
+    position: absolute;
+    top: 350vh;
+    left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .festivities__options__ceremony {
+    position: absolute;
+    top: 350vh;
+    left: calc(50vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .festivities__options__there {
+    position: absolute;
+    top: 350vh;
+    right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .festivities__icon {
+    width: #{$circle-wrapper-size-mobile};
+    height: #{$circle-wrapper-size-mobile};
   }
 
 } // media

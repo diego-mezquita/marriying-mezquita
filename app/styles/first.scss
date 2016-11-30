@@ -7,8 +7,10 @@
 
 $circle-wrapper-size: 100px;
 $half-circle-wrapper-size: calc(#{$circle-wrapper-size} / 2);
-$icon-higher-position: 122vh;
-$icon-lower-position: 150vh;
+$icon-higher-position-about-us: 122vh;
+$icon-lower-position-about-us: 150vh;
+$icon-higher-position-festivities: 422vh;
+$icon-lower-position-festivities: 450vh;
 $lightbox-color: rgba(255, 255, 255, 0.6);
 
 @font-face {
@@ -481,7 +483,12 @@ if it's not present, don't show loader */
   // visibility: hidden;
 }
 
-.lightbox--is-visible{
+.lightbox__about-us--is-visible {
+  // visibility: visible;
+  display: block;
+}
+
+.lightbox__festivities--is-visible {
   // visibility: visible;
   display: block;
 }
@@ -520,22 +527,22 @@ if it's not present, don't show loader */
 }
 
 .about-us__icon--is-animation-up {
-  -webkit-animation-name: animation_up; /* Chrome, Safari, Opera */
-  animation-name: animation_up;
+  -webkit-animation-name: animation_up_au; /* Chrome, Safari, Opera */
+  animation-name: animation_up_au;
 
   animation-fill-mode: forwards;
 }
 
 .about-us__icon--is-animation-left {
-  -webkit-animation-name: animation_left; /* Chrome, Safari, Opera */
-  animation-name: animation_left;
+  -webkit-animation-name: animation_left_au; /* Chrome, Safari, Opera */
+  animation-name: animation_left_au;
 
   animation-fill-mode: forwards;
 }
 
 .about-us__icon--is-animation-right {
-  -webkit-animation-name: animation_right; /* Chrome, Safari, Opera */
-  animation-name: animation_right;
+  -webkit-animation-name: animation_right_au; /* Chrome, Safari, Opera */
+  animation-name: animation_right_au;
 
   // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
   // animation-duration: 1s;
@@ -544,36 +551,36 @@ if it's not present, don't show loader */
 }
 
 /* Chrome, Safari, Opera */
-@-webkit-keyframes animation_up {
+@-webkit-keyframes animation_up_au {
   0%   {
-    top: #{$icon-lower-position};
+    top: #{$icon-lower-position-about-us};
   }
   100% {
-    top: #{$icon-higher-position};
+    top: #{$icon-higher-position-about-us};
   }
 }
 
 /* Standard syntax */
-@keyframes animation_left {
+@keyframes animation_left_au {
   0%   {
     left: calc(25vw - #{$half-circle-wrapper-size});
-    top: #{$icon-lower-position};
+    top: #{$icon-lower-position-about-us};
   }
   100% {
     left: calc(10vw - #{$half-circle-wrapper-size});
-    top: #{$icon-higher-position};
+    top: #{$icon-higher-position-about-us};
   }
 }
 
 /* Chrome, Safari, Opera */
-@-webkit-keyframes animation_right {
+@-webkit-keyframes animation_right_au {
   0%   {
     right: calc(25vw - #{$half-circle-wrapper-size});
-    top: #{$icon-lower-position};
+    top: #{$icon-lower-position-about-us};
   }
   100% {
     right: calc(10vw - #{$half-circle-wrapper-size});
-    top: #{$icon-higher-position};
+    top: #{$icon-higher-position-about-us};
   }
 }
 
@@ -595,22 +602,22 @@ if it's not present, don't show loader */
 }
 
 .festivities__icon--is-animation-up {
-  -webkit-animation-name: animation_up; /* Chrome, Safari, Opera */
-  animation-name: animation_up;
+  -webkit-animation-name: animation_up_f; /* Chrome, Safari, Opera */
+  animation-name: animation_up_f;
 
   animation-fill-mode: forwards;
 }
 
-.about-festivities__icon--is-animation-left {
-  -webkit-animation-name: animation_left; /* Chrome, Safari, Opera */
-  animation-name: animation_left;
+.festivities__icon--is-animation-left {
+  -webkit-animation-name: animation_left_f; /* Chrome, Safari, Opera */
+  animation-name: animation_left_f;
 
   animation-fill-mode: forwards;
 }
 
 .festivities__icon--is-animation-right {
-  -webkit-animation-name: animation_right; /* Chrome, Safari, Opera */
-  animation-name: animation_right;
+  -webkit-animation-name: animation_right_f; /* Chrome, Safari, Opera */
+  animation-name: animation_right_f;
 
   // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
   // animation-duration: 1s;
@@ -619,38 +626,40 @@ if it's not present, don't show loader */
 }
 
 /* Chrome, Safari, Opera */
-@-webkit-keyframes animation_up {
+@-webkit-keyframes animation_up_f {
   0%   {
-    top: #{$icon-lower-position};
+    top: #{$icon-lower-position-festivities};
   }
   100% {
-    top: #{$icon-higher-position};
+    top: #{$icon-higher-position-festivities};
   }
 }
 
 /* Standard syntax */
-@keyframes animation_left {
+@keyframes animation_left_f {
   0%   {
     left: calc(25vw - #{$half-circle-wrapper-size});
-    top: #{$icon-lower-position};
+    top: #{$icon-lower-position-festivities};
   }
   100% {
     left: calc(10vw - #{$half-circle-wrapper-size});
-    top: #{$icon-higher-position};
+    top: #{$icon-higher-position-festivities};
   }
 }
 
 /* Chrome, Safari, Opera */
-@-webkit-keyframes animation_right {
+@-webkit-keyframes animation_right_f {
   0%   {
     right: calc(25vw - #{$half-circle-wrapper-size});
-    top: #{$icon-lower-position};
+    top: #{$icon-lower-position-festivities};
   }
   100% {
     right: calc(10vw - #{$half-circle-wrapper-size});
-    top: #{$icon-higher-position};
+    top: #{$icon-higher-position-festivities};
   }
 }
+
+
 
 // SUPERSLIDES PAGINATOR css.
 //  It was not being recognised in the published version
@@ -794,6 +803,7 @@ if it's not present, don't show loader */
 
 
 // Menu Colours
+$icon-higher-position-about-us-mobile: 112vh;
 $circle-wrapper-size-mobile: 55px;
 $half-circle-wrapper-size-mobile: calc(#{$circle-wrapper-size-mobile} / 2);
 $menu-bg: #333;
@@ -864,6 +874,12 @@ $text-color: #eee;
 	//   font-size: 2.8em;
   // }
 
+  .title-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   .main-title {
     margin-top: 2%;
     max-width: 90vw;
@@ -889,6 +905,12 @@ $text-color: #eee;
 
   .icon-map {
     width: 37px;
+  }
+
+  .about-us-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .about-us__icon {
@@ -919,40 +941,50 @@ $text-color: #eee;
   }
 
   /* Chrome, Safari, Opera */
-  @-webkit-keyframes animation_up {
+  @-webkit-keyframes animation_up_au {
     0%   {
-      top: #{$icon-lower-position};
+      top: #{$icon-lower-position-about-us};
     }
     100% {
-      top: #{$icon-higher-position};
+      top: #{$icon-higher-position-about-us-mobile};
     }
   }
 
-  @keyframes animation_left {
+  @keyframes animation_left_au {
     0%   {
       left: calc(25vw - #{$half-circle-wrapper-size-mobile});
-      top: #{$icon-lower-position};
+      top: #{$icon-lower-position-about-us};
     }
     100% {
       left: calc(12vw - #{$half-circle-wrapper-size-mobile});
-      top: #{$icon-higher-position};
+      top: #{$icon-higher-position-about-us-mobile};
     }
   }
 
   /* Chrome, Safari, Opera */
-  @-webkit-keyframes animation_right {
+  @-webkit-keyframes animation_right_au {
     0%   {
       right: calc(25vw - #{$half-circle-wrapper-size-mobile});
-      top: #{$icon-lower-position};
+      top: #{$icon-lower-position-about-us};
     }
     100% {
       right: calc(12vw - #{$half-circle-wrapper-size-mobile});
-      top: #{$icon-higher-position};
+      top: #{$icon-higher-position-about-us-mobile};
     }
   }
 
   .festivities-wrapper {
     z-index: 5;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .travel-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .sections-menu {
@@ -1056,6 +1088,10 @@ $text-color: #eee;
   .festivities__icon {
     width: #{$circle-wrapper-size-mobile};
     height: #{$circle-wrapper-size-mobile};
+  }
+
+  .lightbox__about-us--is-visible {
+    top: 16vh;
   }
 
 } // media

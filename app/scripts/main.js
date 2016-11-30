@@ -103,6 +103,7 @@ $('.js-pic-nav-left').click(function () {
 
 let lightboxIsVisibleValue = $('.lightbox--is-left').hasClass('lightbox--is-visible');
 let activeSectionAboutUs;
+let activeSectionFestivities;
 const lightboxTexts = {
 	'meet': '<div class="lightbox__text"><p>How we met</p><p>It was my (Holly’s) 2nd interview with the CEO of the company. I couldn’t have been any more nervous, and to make matters worse, my future boss had accidentally sent me the address to the wrong office. I frantically called around trying to figure out where I needed to be so I could get to the interview on time.</p><p>I finally found my way into a small office by the beach. Everyone was completely silent and staring my way when I walked in. I felt like I had just burst in on them, but what I thought at the time was a sweet little nerd, hopped up immediately to greet me with the biggest smile.</p><p>Before I let him speak I told him my situation, in Spanish, asking if the man I was going to have my interview with worked in this office or not. Funny enough, he answered me in English (was my Spanish really that bad?) letting me know that I had made it.</p><p>The boss came out from the back room jokingly telling everyone I had just passed my first test. And just a few short hours after the interview, I received a formal offer to join the team. I was just as excited (well, a bit nervous too) about the job as I was about seeing Diego again!</p></div>',
 	'love': '<div class="lightbox__text"><p>How we started dating</p><p>It all started at the water tank. Well, sort of. We spent months and months slowly getting to know each other, mostly smiling at each other and finding excuses here and there to talk.</p><p>It wasn’t until we decided to grab a drink together after a long week at work that things really began. I don’t think either of us were really considering our first date to be an actual date or at least not in the beginning. We were both cautious, but after hours of getting lost in conversation, we quickly realized things felt right and from that point on we were inseparable.</p></div>',
@@ -126,8 +127,14 @@ $('.js-open-menu').click(function () {
 
 });
 
-function setLightboxText(iconClicked) {
+function setLightboxTextOurStory(iconClicked) {
 	const lightboxText = $('.js-lightbox-text');
+
+	lightboxText.html(lightboxTexts[iconClicked]);
+}
+
+function setLightboxTextFestivities(iconClicked) {
+	const lightboxText = $('.js-ligh');
 
 	lightboxText.html(lightboxTexts[iconClicked]);
 }
@@ -156,13 +163,13 @@ function ourStoryAnimationApply() {
 
   let iconClicked = this.classList[0].split('__')[2];
 
-  let lightbox = $('.lightbox');
+  let lightbox = $('.lightbox-our-story');
   let optionsMenu = $('.about-us__options');
   let iconLeft = $('.js-meet-click');
   let iconCenter = $('.js-love-click');
   let iconRight= $('.js-porposal-click');
 
-	setLightboxText(iconClicked);
+	setLightboxTextOurStory(iconClicked);
 
   if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValue) {
     iconLeft.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-left');
@@ -174,7 +181,7 @@ function ourStoryAnimationApply() {
     // TODO add prefixes for all browsers
     $('.about-us__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
       function(){
-        lightbox.toggleClass('animated fadeIn lightbox--is-visible lightbox--is-' + iconClicked);
+        lightbox.toggleClass('animated fadeIn lightbox__about-us--is-visible lightbox--is-' + iconClicked);
     });
     lightboxIsVisibleValue = !lightboxIsVisibleValue;
   } else if (lightboxIsVisibleValue === true) {
@@ -202,25 +209,25 @@ function festivitiesAnimationApply() {
 
   let iconClicked = this.classList[0].split('__')[2];
 
-  let lightbox = $('.lightbox');
+  let lightbox = $('.lightbox-festivities');
   let optionsMenu = $('.festivies__options');
   let iconLeft = $('.js-ireland');
   let iconCenter = $('.js-ceremony');
   let iconRight= $('.js-there');
 
-	setLightboxText(iconClicked);
+	setLightboxTextFestivities(iconClicked);
 
   if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValue) {
-    iconLeft.toggleClass('festivies__icon--is-animation festivies__icon--is-animation-left');
-    iconCenter.toggleClass('festivies__icon--is-animation festivies__icon--is-animation-up');
-    iconRight.toggleClass('festivies__icon--is-animation festivies__icon--is-animation-right');
+    iconLeft.toggleClass('festivitieses__icon--is-animation festivities__icon--is-animation-left');
+    iconCenter.toggleClass('festivities__icon--is-animation festivities__icon--is-animation-up');
+    iconRight.toggleClass('festivities__icon--is-animation festivities__icon--is-animation-right');
 
     activeSectionFestivities = iconClicked;
 
     // TODO add prefixes for all browsers
-    $('.festivies__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
+    $('.festivtiies__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
       function(){
-        lightbox.toggleClass('animated fadeIn lightbox--is-visible lightbox--is-' + iconClicked);
+        lightbox.toggleClass('animated fadeIn lightbox__festivities--is-visible lightbox--is-' + iconClicked);
     });
     lightboxIsVisibleValue = !lightboxIsVisibleValue;
   } else if (lightboxIsVisibleValue === true) {
@@ -228,7 +235,7 @@ function festivitiesAnimationApply() {
       $('.lightbox').toggleClass('lightbox--is-' + activeSectionFestivities);
       $('.lightbox').toggleClass('lightbox--is-' + iconClicked);
 
-      activeFestivities = iconClicked;
+      activeSectionFestivities = iconClicked;
     } else {
       console.log('hola');
     }

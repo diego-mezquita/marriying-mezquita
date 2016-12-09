@@ -292,3 +292,20 @@ $(function() {
 
   $('.open-menu').height($(window).height());
 });
+
+// dialog-polyfill - START
+var dialog = document.querySelector('dialog');
+document.querySelector('#show').onclick = function() {
+  dialog.showModal();
+};
+document.querySelector('#close').onclick = function() {
+  dialog.close();
+};
+// dialog-polyfill - END
+
+// iframe google form - START
+$('.js-iframe-form').load(function(){
+    // alert('frame has (re)loaded');
+		const final = $('.freebirdFormviewerViewResponseConfirmationMessage').val() === 'Your response has been recorded.';
+});
+// iframe google form - END

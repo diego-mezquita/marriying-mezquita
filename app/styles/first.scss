@@ -869,6 +869,25 @@ $text-color: #eee;
   }
 } //nav
 
+dialog {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  top: 410vh;
+}
+
+.iframe-form {
+  padding: 0;
+  display: block;
+  border-radius: 6px;
+  height: 80vh;
+}
+
+.dialog__button {
+  display: none;
+}
+
 @media screen and (max-width: 680px) {
   // h1 {
 	//   font-size: 2.8em;
@@ -1129,3 +1148,6 @@ $text-color: #eee;
 .nav-menu {
 
 }
+
+
+// <div class="freebirdFormviewerViewResponseConfirmationMessage">Your response has been recorded.</div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>yo marrying mezquita</title>
+    <title>Marrying Mezquita</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -54,23 +54,9 @@
           <li><a class="section-link js-nav-btn" href="#slides">GALLERY</a></li>
           <li><a class="section-link js-nav-btn" href="#festivities-id">FESTIVITIES</a></li>
           <li><a class="section-link js-nav-btn" href="#travel-id">TRAVEL</a></li>
-          <!-- <li class="icon"> -->
-            <!-- <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a> -->
-          <!-- </li> -->
         </ul>
         <a href="" class="js-open-menu section-link" id="openup">MENU</a>
       </nav>
-
-      <!-- <ul class="topnav" id="myTopnav">
-        <li><a href="#">Welcome</a></li>
-        <li><a href="#about-us-id">Our Story</a></li>
-        <li><a href="#slides">Gallery</a></li>
-        <li><a href="#festivities-id">Festivities</a></li>
-        <li><a href="#travel-id">Travel</a></li>
-        <li class="icon">
-          <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-        </li>
-      </ul> -->
 
       <div class="wrapper title-wrapper">
         <img class="main-title" src="../images/holly&diego.png"></img>
@@ -106,24 +92,19 @@
           <img src="./images/gallery-4.jpg" alt="">
           <img src="./images/gallery-5.jpg" alt="">
           <img src="./images/gallery-6.jpg" alt="">
-          <!-- <img src="./images/gallery-7.png" alt=""> -->
           <img src="./images/gallery-8.jpg" alt="">
           <img src="./images/gallery-9.jpg" alt="">
-          <!-- <img src="./images/gallery-10.jpg" alt=""> -->
         </div>
 
         <nav class="slides-navigation">
           <a href="#" class="next">
-            <!-- <i class="icon-chevron-right"></i> -->
           </a>
           <a href="#" class="prev">
-            <!-- <i class="icon-chevron-left"></i> -->
           </a>
         </nav>
       </div>
       <div id="festivities-id" class="wrapper festivities-wrapper">
         <p class="title festivities__title">Festivities</p>
-        <!-- <p class="about-us">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus eros, faucibus id semper sed, efficitur at est. Vivamus suscipit, urna sed eleifend tincidunt, turpis quam molestie nunc, quis aliquet neque lorem sit amet lorem. Quisque fermentum tellus vel sapien aliquet porttitor. Morbi congue non est vel congue. Nulla bibendum nibh tristique, imperdiet ipsum a, varius justo. Integer placerat mollis felis nec suscipit. Curabitur nisi erat, malesuada sed nibh eget, euismod convallis nibh. Suspendisse dictum faucibus elit, quis dignissim libero accumsan ut.<br><br>In in porttitor neque, eget ultrices lacus. Curabitur pharetra, arcu tincidunt rhoncus placerat, enim massa luctus augue, sed pellentesque sem sem accumsan sem. Maecenas in tempus erat. Curabitur varius ex eu velit porta, a rutrum tortor dignissim. Donec tincidunt, purus ut pretium consequat, nulla est feugiat ligula, nec tristique magna nibh id magna. Vivamus in sollicitudin est, et feugiat nisi. Vestibulum maximus lectus in magna pretium, et dapibus turpis varius.</p> -->
         <div class="festivities__options">
           <div class="festivities__options__ireland festivities__icon js-ireland">
             <img class="icon" src="./images/leprechaun.svg"/>
@@ -138,28 +119,22 @@
 
         <div class="lightbox lightbox-festivities lightbox--is-round">
           <div class="js-ligh tbox-text lightbox__text">
-            <!-- <p class="">And now using .round we can smooth the sides down. Also uses .btm-left to show a triangle at the bottom flush to the left.</p> -->
           </div>
         </div>
       </div>
 
       <div id="travel-id" class="wrapper travel-wrapper">
         <div class="coming-soon">
-          <!-- <p class="title title-coming-soon">Coming Soon...</p> -->
           <dialog>
-            <iframe class="js-iframe-form iframe-form" src="https://docs.google.com/forms/d/e/1FAIpQLSerXL7v6I6YDT_a6kGP44YATHevGqnqgs8F2UOwvDD-DZLyGQ/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-            <button id="close" class="dialog__button">Close</button>
+            <div class="dialog">
+              <iframe class="js-iframe-form iframe-form" src="https://docs.google.com/forms/d/e/1FAIpQLSerXL7v6I6YDT_a6kGP44YATHevGqnqgs8F2UOwvDD-DZLyGQ/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+              <button id="close" class="dialog__button">Close</button>
+            </div>
           </dialog>
-          <button id="show" style="display:none;">Open Dialog!</button>
+          <img class="rsvp" id="show" src="./images/rsvp-transparent.gif" />
         </div>
       </div>
     </div>
-
-    <!-- <dialog>
-      <p>This is da dialog!</p>
-      <button id="close">Close</button>
-    </dialog>
-    <button id="show">Open Dialog!</button> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -172,21 +147,6 @@
       ga('send', 'pageview');
 
     </script>
-
-    <!-- build:js scripts/plugins.js -->
-    <!-- <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script> -->
-    <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>

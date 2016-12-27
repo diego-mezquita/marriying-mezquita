@@ -9,8 +9,8 @@ $circle-wrapper-size: 100px;
 $half-circle-wrapper-size: calc(#{$circle-wrapper-size} / 2);
 $icon-higher-position-about-us: 122vh;
 $icon-lower-position-about-us: 150vh;
-$icon-higher-position-festivities: 422vh;
-$icon-lower-position-festivities: 450vh;
+$icon-higher-position-festivities: 322vh;
+$icon-lower-position-festivities: 350vh;
 $lightbox-color: rgba(255, 255, 255, 0.6);
 
 @font-face {
@@ -389,7 +389,10 @@ if it's not present, don't show loader */
   // margin-top: 15px;
   // width: calc(100vw - #{$circle-wrapper-size});
   width: 100%;
-	height: 50vh;
+	// height: 50vh;
+  min-height: 20vh;
+  max-height: 50vh;
+  height: 100%;
 	background-color: #{$lightbox-color};
   opacity: 0.6;
 }
@@ -585,7 +588,66 @@ if it's not present, don't show loader */
   }
 }
 
-// OUR STORY ANIMATIONS -------
+// FESTIVITIES ANIMATIONS -------
+.lightbox--is-ireland {
+  // visibility: hidden;
+  display: inline-block;;
+}
+
+.lightbox--is-ireland::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -44px;
+  left: 20px;
+	right: auto;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #{$lightbox-color} transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-ceremony {
+  // visibility: hidden;
+  display: inline-block;;
+}
+
+.lightbox--is-ceremony::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -44px;
+  left: calc(50% - calc(22px / 2));
+  bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #{$lightbox-color} transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-there {
+  // visibility: hidden;
+  display: inline-block;
+}
+
+.lightbox--is-there::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -44px;
+	right: 20px;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #{$lightbox-color} transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+
 .festivities__icon--is-animation {
     // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */

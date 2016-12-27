@@ -101,7 +101,8 @@ $('.js-pic-nav-left').click(function () {
   currentActive.removeClass('active');
 });
 
-let lightboxIsVisibleValue = $('.lightbox--is-left').hasClass('lightbox--is-visible');
+let lightboxIsVisibleValueAboutUs = $('.js-meet-click').hasClass('lightbox--is-visible');
+let lightboxIsVisibleValueFestivities = $('.js-ireland').hasClass('lightbox--is-visible');
 let activeSectionAboutUs;
 let activeSectionFestivities;
 const lightboxTexts = {
@@ -128,13 +129,13 @@ $('.js-open-menu').click(function () {
 });
 
 function setLightboxTextOurStory(iconClicked) {
-	const lightboxText = $('.js-lightbox-text');
+	const lightboxText = $('.js-our-story-text');
 
 	lightboxText.html(lightboxTexts[iconClicked]);
 }
 
 function setLightboxTextFestivities(iconClicked) {
-	const lightboxText = $('.js-ligh');
+	const lightboxText = $('.js-festivities-text');
 
 	lightboxText.html(lightboxTexts[iconClicked]);
 }
@@ -159,7 +160,7 @@ $('.js-porposal-click').click(ourStoryAnimationApply);
 
 function ourStoryAnimationApply() {
   'use strict';
-  console.log('I`m here!');
+  console.log('I`m here OUR STORY!');
 
   let iconClicked = this.classList[0].split('__')[2];
 
@@ -171,7 +172,7 @@ function ourStoryAnimationApply() {
 
 	setLightboxTextOurStory(iconClicked);
 
-  if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValue) {
+  if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValueAboutUs) {
     iconLeft.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-left');
     iconCenter.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-up');
     iconRight.toggleClass('about-us__icon--is-animation about-us__icon--is-animation-right');
@@ -183,19 +184,19 @@ function ourStoryAnimationApply() {
       function(){
         lightbox.toggleClass('animated fadeIn lightbox__about-us--is-visible lightbox--is-' + iconClicked);
     });
-    lightboxIsVisibleValue = !lightboxIsVisibleValue;
-  } else if (lightboxIsVisibleValue === true) {
+    lightboxIsVisibleValueAboutUs = !lightboxIsVisibleValueAboutUs;
+  } else if (lightboxIsVisibleValueAboutUs === true) {
     if (iconClicked !== activeSectionAboutUs) {
-      $('.lightbox').toggleClass('lightbox--is-' + activeSectionAboutUs);
-      $('.lightbox').toggleClass('lightbox--is-' + iconClicked);
+      $('.lightbox-our-story').toggleClass('lightbox--is-' + activeSectionAboutUs);
+      $('.lightbox-our-story').toggleClass('lightbox--is-' + iconClicked);
 
       activeSectionAboutUs = iconClicked;
     } else {
-      console.log('hola');
+      console.log('hola our STORY');
     }
 
   } else {
-    lightboxIsVisibleValue = lightbox.hasClass('lightbox--is-visible');
+    lightboxIsVisibleValueAboutUs = lightbox.hasClass('lightbox--is-visible');
   }
 }
 
@@ -217,31 +218,31 @@ function festivitiesAnimationApply() {
 
 	setLightboxTextFestivities(iconClicked);
 
-  if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValue) {
-    iconLeft.toggleClass('festivitieses__icon--is-animation festivities__icon--is-animation-left');
+  if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValueFestivities) {
+    iconLeft.toggleClass('festivities__icon--is-animation festivities__icon--is-animation-left');
     iconCenter.toggleClass('festivities__icon--is-animation festivities__icon--is-animation-up');
     iconRight.toggleClass('festivities__icon--is-animation festivities__icon--is-animation-right');
 
     activeSectionFestivities = iconClicked;
 
     // TODO add prefixes for all browsers
-    $('.festivtiies__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
+    $('.festivities__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
       function(){
         lightbox.toggleClass('animated fadeIn lightbox__festivities--is-visible lightbox--is-' + iconClicked);
     });
-    lightboxIsVisibleValue = !lightboxIsVisibleValue;
-  } else if (lightboxIsVisibleValue === true) {
+    lightboxIsVisibleValueFestivities = !lightboxIsVisibleValueFestivities;
+  } else if (lightboxIsVisibleValueFestivities === true) {
     if (iconClicked !== activeSectionFestivities) {
-      $('.lightbox').toggleClass('lightbox--is-' + activeSectionFestivities);
-      $('.lightbox').toggleClass('lightbox--is-' + iconClicked);
+      $('.lightbox-festivities').toggleClass('lightbox--is-' + activeSectionFestivities);
+      $('.lightbox-festivities').toggleClass('lightbox--is-' + iconClicked);
 
       activeSectionFestivities = iconClicked;
     } else {
-      console.log('hola');
+      console.log('hola festivities');
     }
 
   } else {
-    lightboxIsVisibleValue = lightbox.hasClass('lightbox--is-visible');
+    lightboxIsVisibleValueFestivities = lightbox.hasClass('lightbox--is-visible');
   }
 }
 

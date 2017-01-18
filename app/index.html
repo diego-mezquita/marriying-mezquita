@@ -13,6 +13,10 @@
     <script src="/bower_components/jquery/jquery.min.js"></script>
     <!-- endbuild -->
 
+    <!-- build:js scripts/vendor/i18next.min.js -->
+    <!-- <script type="text/javascript" src="node_modules/i18next/i18next.js" /> -->
+    <!-- endbuild -->
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/first.css">
@@ -128,21 +132,33 @@
       </div>
 
       <div id="travel-id" class="wrapper travel-wrapper">
-        <div class="coming-soon">
-          <dialog>
-            <div class="dialog">
-              <!-- https://www.google.com/maps/embed/v1/place?q=place_id:ChIJqV96s_X3Z0gR4zW5LRgHOjs&key=AIzaSyD4iE2xVSpkLLOXoyqT-RuPwURN3ddScAI -->
-              <!-- <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJqV96s_X3Z0gR4zW5LRgHOjs&key=AIzaSyCp-7jJz_fHlG7MFw2pUzADZfDRkjyiy2Q" allowfullscreen></iframe> -->
-              <iframe class="js-iframe-form iframe-form" src="https://docs.google.com/forms/d/e/1FAIpQLSerXL7v6I6YDT_a6kGP44YATHevGqnqgs8F2UOwvDD-DZLyGQ/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-              <button id="close" class="dialog__button">Close</button>
-            </div>
-          </dialog>
-          <img class="rsvp" id="show" src="./images/rsvp-transparent.gif" />
+        <p class="title travel__title">Travel</p>
+        <div class="travel__options">
+          <div class="travel__options__eat travel__icon js-ireland">
+            <img class="icon" src="./images/leprechaun.svg"/>
+          </div>
+          <div class="travel__options__see travel__icon js-ceremony">
+            <img class="icon" src="./images/wedding-cake-with-heart.svg"/>
+          </div>
+          <div class="travel__options__sleep travel__icon js-there">
+            <img class="icon" src="./images/map.svg"/>
+          </div>
+        </div>
+
+        <div class="lightbox lightbox-travel lightbox--is-round">
+          <div class="js-travel-text lightbox__text">
+          </div>
         </div>
       </div>
 
       <div id="wiiii-id" class="wrapper to-be-defined">
       <!-- add something here -->
+      <div data-i18n="title"></div>
+      <input placeholder="Hello" value="name">
+      <div class="holder"></div>
+      <button class="lang" data-lang="en">Eng</button>
+      <button class="lang" data-lang="es">Esp</button>
+      <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
       </div>
 
       <div id="-id" class="wrapper travel-wrapper">

@@ -12,6 +12,67 @@ $(document).ready(function(){
   $('#slides').superslides();
 });
 
+// i18next js set up
+//  VERSION ONE
+// $(document).ready(function() {
+// 	// load modules
+// 	var express = require('express');
+//   var i18n = require("i18n");
+//
+// 	i18n.configure({
+//     locales:['en', 'es'],
+//     directory: __dirname + '/locales'
+// 	});
+//
+// 	getlocale();
+// });
+//  VERSION TWO
+// var resources = {
+//     "es": {
+//         "translation": {
+//             "title": "título",
+//                 "placeholder_1": "introduce nombre",
+//                 "value_1": "valor_1"
+//         }
+//     },
+//         "en": {
+//         "translation": {
+//             "title": "title of the page",
+//                 "placeholder_1": "enter name",
+//                 "value_1": "value 1"
+//         }
+//     }
+// };
+//
+// $(document).ready(function () {
+//     i18n.init({
+//         "lng": 'en',
+//         "resStore": resources,
+//         "fallbackLng" : 'en'
+//     }, function (t) {
+//         $(document).i18n();
+//     });
+//
+//     $('.lang').click(function () {
+//         var lang = $(this).attr('data-lang');
+//         i18n.init({
+//             lng: lang
+//         }, function (t) {
+//             $(document).i18n();
+//         });
+//     });
+// });
+//  VERSION ONE
+// $(document).ready(function () {
+// 	i18n.init(function(err, t) {
+// 	  // translate nav
+// 	  $('.nav').i18n();
+//
+// 	  // programatical access
+// 	  var appName = t('app.name');
+// 	});
+// });
+
 $(document).ready(function () {
   $(document).on('scroll', onScroll);
 

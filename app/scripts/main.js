@@ -329,7 +329,7 @@ function travelAnimationApply() {
   let iconCenter = $('.js-see');
   let iconRight= $('.js-sleep');
 
-	setLightboxTextFestivities(iconClicked);
+	setLightboxTextTravel(iconClicked);
 
   if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValueTravel) {
     iconLeft.toggleClass('travel__icon--is-animation travel__icon--is-animation-left');

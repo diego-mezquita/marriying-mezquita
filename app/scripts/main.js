@@ -73,6 +73,7 @@ $(document).ready(function(){
 // 	});
 // });
 
+
 $(document).ready(function () {
   $(document).on('scroll', onScroll);
 
@@ -424,3 +425,10 @@ $('.js-iframe-form').load(function(){
 		const final = $('.freebirdFormviewerViewResponseConfirmationMessage').val() === 'Your response has been recorded.';
 });
 // iframe google form - END
+
+// travel suggestions - START
+// $(document).ready(function() {
+// 	$(function() {
+	// $('js-image-hover > li').hoverdir();
+// 	});
+// });

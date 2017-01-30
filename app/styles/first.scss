@@ -308,6 +308,7 @@ if it's not present, don't show loader */
   padding: 0 5vw;
 
   background: url("../images/H&D-0157.jpg");
+  // background: url("../images/galway.jpg");
   background-size: cover;
 }
 
@@ -847,89 +848,6 @@ if it's not present, don't show loader */
 .lightbox__board__section:first-of-type {
   // margin-top: 5%;
   margin-top: 1%;
-}
-
-.card {
-  // border-width: 3px;
-  // border-color: red;
-
-  width: 48%;
-
-  border: 1px solid #870;
-  background-color: beige;
-  height: 90%;
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-
-.card__image {
-  width: 25%;
-  height: 95%;
-  border-right: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 1%;
-}
-
-.card__text {
-  width: 75%;
-  height: 90%;
-  padding: 0 1%;
-}
-
-.card_text_title {
-  font-size: 20px;
-  color: black;
-}
-
-.card_text_standard {
-  flex-grow: 1;
-}
-
-.card_text_info {
-  display: flex;
-  flex-direction: column;
-}
-
-.bunsen-image {
-  width: 100%;
-  background-size: cover;
-}
-
-.card__text__button {
-  width: 50px;
-  height: 50px;
-  padding: 0 5px;
-  margin-bottom: 5px;
-  border-radius: 6px;
-}
-
-.card__text__button::first-of-type {
-  padding: 0 5px 0 0;
-}
-
-.card__text__button:last-of-type {
-  padding: 0 0 0 5px;
-}
-
-.maps-image {
-  background-color: #00CC00;
-}
-
-.fb-image {
-  background-color: #3B5998;
-}
-
-.instagram-image {
-  background-color: #A64CA6;
-}
-
-.snapchat-image{
-  background-color: #E5E500;
 }
 
 .travel__icon--is-animation {

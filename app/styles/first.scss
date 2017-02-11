@@ -1070,6 +1070,8 @@ if it's not present, don't show loader */
 
 // Menu Colours
 $icon-higher-position-about-us-mobile: 112vh;
+$icon-higher-position-festivities-mobile: 312vh;
+$icon-higher-position-travel-mobile: 512vh;
 $circle-wrapper-size-mobile: 55px;
 $half-circle-wrapper-size-mobile: calc(#{$circle-wrapper-size-mobile} / 2);
 $menu-bg: #333;
@@ -1258,6 +1260,7 @@ dialog {
 
   .lightbox {
     // top: 22vh;
+    max-height: 85%;
   }
 
   .lightbox__text {
@@ -1313,11 +1316,78 @@ dialog {
     background-position: center;
   }
 
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_up_f {
+    0%   {
+      top: #{$icon-lower-position-festivities};
+    }
+    100% {
+      top: #{$icon-higher-position-festivities-mobile};
+    }
+  }
+
+  @keyframes animation_left_f {
+    0%   {
+      left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-festivities};
+    }
+    100% {
+      left: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-festivities-mobile};
+    }
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_right_f {
+    0%   {
+      right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-festivities};
+    }
+    100% {
+      right: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-festivities-mobile};
+    }
+  }
+
   .travel-wrapper {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_up_travel {
+    0%   {
+      top: #{$icon-lower-position-travel};
+    }
+    100% {
+      top: #{$icon-higher-position-travel-mobile};
+    }
+  }
+
+  @keyframes animation_left_travel {
+    0%   {
+      left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-travel};
+    }
+    100% {
+      left: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-travel-mobile};
+    }
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_right_travel {
+    0%   {
+      right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-travel};
+    }
+    100% {
+      right: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-travel-mobile};
+    }
+  }
+
 
   .sections-menu {
     height: auto;
@@ -1433,6 +1503,35 @@ dialog {
 
   .lightbox__about-us--is-visible {
     top: 22vh;
+  }
+
+  .travel-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .travel__icon {
+    width: #{$circle-wrapper-size-mobile};
+    height: #{$circle-wrapper-size-mobile};
+  }
+
+  .travel__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .travel__options__eat {
+    left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .travel__options__see {
+    left: calc(50vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .travel__options__sleep {
+    right: calc(25vw - #{$half-circle-wrapper-size-mobile});
   }
 
 } // media

@@ -63,6 +63,8 @@
   padding: 2%;
 }
 
+
+// Eat & drink
 .bunsen-background {
   background: url("../images/bunsen.png");
   background-size: cover;
@@ -74,8 +76,9 @@
 }
 
 .burdock-background {
-  background: url("../images/bunsen.png");
+  background: url("../images/leoburdock-small.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .queen-background {
@@ -103,6 +106,32 @@
   background-size: cover;
 }
 
+// To do & see
+.phoenix-background {
+  background: url("../images/phoenixpark.jpg");
+  background-size: cover;
+}
+
+.guinness-background {
+  background: url("../images/guinness-storehouse.jpg");
+  background-size: cover;
+}
+
+.dublin-background {
+  background: url("../images/leoburdock-small.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.west-background {
+  background: url("../images/cliffs-of-moher.jpg");
+  background-size: cover;
+}
+
+.giant-background {
+  background: url("../images/giant.jpg");
+  background-size: cover;
+}
 
 span.link_post{
 display:block;
@@ -223,4 +252,10 @@ margin-left:10px;
 
 .snapchat-image{
   background-color: #E5E500;
+}
+
+@media screen and (max-width: 680px) {
+  .info-wrapper {
+    width: 100%;
+  }
 }

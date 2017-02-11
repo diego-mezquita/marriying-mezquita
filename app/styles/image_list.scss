@@ -1,0 +1,261 @@
+/* Information slide in from right side and occupies partially the image */
+.portfolio-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.portfolio {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  padding-left: 0;
+  margin-top: 1%;
+}
+
+.info-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 49.5%;
+  height: 35vh;
+  // border: 1px solid black;
+
+  // display: inline;
+  float: left;
+  margin-bottom: 1%;
+  // margin-top: 3vh;
+
+  border-radius: 5px;
+}
+
+.info-wrapper--is-first-of-line {
+  margin-right: 1%;
+}
+
+.info-wrapper:hover .info-slide {
+  transition: 1s;
+  right: 0;
+}
+
+.info-slide-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.info-slide {
+  position: absolute;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 1s;
+  color: white;
+
+
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+
+// Eat & drink
+.bunsen-background {
+  background: url("../images/bunsen.png");
+  background-size: cover;
+}
+
+.threefe-background {
+  background: url("../images/3fe-breakfast-big.jpg");
+  background-size: cover;
+}
+
+.burdock-background {
+  background: url("../images/leoburdock-small.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.queen-background {
+  background: url("../images/queen-of-tarts.jpg");
+  background-size: cover;
+}
+
+.o-neills-background {
+  background: url("../images/o-neills.jpg");
+  background-size: cover;
+}
+
+.brazenhead-background {
+  background: url("../images/brazenhead.jpg");
+  background-size: cover;
+}
+
+.darkeykellys-background {
+  background: url("../images/darkeykellys.jpg");
+  background-size: cover;
+}
+
+.porterhouse-background {
+  background: url("../images/porterhouse.jpg");
+  background-size: cover;
+}
+
+// To do & see
+.phoenix-background {
+  background: url("../images/phoenixpark.jpg");
+  background-size: cover;
+}
+
+.guinness-background {
+  background: url("../images/guinness-storehouse.jpg");
+  background-size: cover;
+}
+
+.dublin-background {
+  background: url("../images/leoburdock-small.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.west-background {
+  background: url("../images/cliffs-of-moher.jpg");
+  background-size: cover;
+}
+
+.giant-background {
+  background: url("../images/giant.jpg");
+  background-size: cover;
+}
+
+span.link_post{
+display:block;
+width:35px;
+height:35px;
+background-color:#DF6232;
+border-radius:50px;
+cursor:pointer;
+background-image:url(images/link_post_icon.png);
+background-repeat:no-repeat;
+background-position:center;
+margin-right:10px;
+}
+
+span.zoom{
+overflow:hidden;
+display:block;
+width:35px;
+height:35px;
+background-color:#DF6232;
+border-radius:50px;
+cursor:pointer;
+background-image:url(images/zoom_icon.png);
+background-repeat:no-repeat;
+background-position:center;
+margin-left:10px;
+}
+
+.card {
+  // border-width: 3px;
+  // border-color: red;
+
+  width: 48%;
+
+  // border: 1px solid #870;
+  // background-color: beige;
+  height: 90%;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.card__image {
+  width: 25%;
+  height: 95%;
+  // border-right: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1%;
+}
+
+.card__text {
+  width: 100%;
+  height: 100%;
+  // margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_text_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.card_text_standard {
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.card_text_info {
+  display: flex;
+  flex-direction: column;
+
+  letter-spacing: 0.5px;
+
+  height: 100%;
+  width: 100%;
+}
+
+// .bunsen-image {
+//   width: 100%;
+//   background: url("../images/bunsen.png");
+//   background-size: cover;
+// }
+
+.card__text__button {
+  width: 50px;
+  height: 50px;
+  padding: 0 5px;
+  // margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+.card__text__button::first-of-type {
+  // padding: 0 5px 0 0;
+}
+
+.card__text__button:last-of-type {
+  // padding: 0 0 0 5px;
+}
+
+.maps-image {
+  background-color: #00CC00;
+}
+
+.fb-image {
+  background-color: #3B5998;
+}
+
+.instagram-image {
+  background-color: #A64CA6;
+}
+
+.snapchat-image{
+  background-color: #E5E500;
+}
+
+@media screen and (max-width: 680px) {
+  .info-wrapper {
+    width: 100%;
+  }
+}

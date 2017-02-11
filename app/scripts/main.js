@@ -73,6 +73,7 @@ $(document).ready(function(){
 // 	});
 // });
 
+
 $(document).ready(function () {
   $(document).on('scroll', onScroll);
 
@@ -164,8 +165,10 @@ $('.js-pic-nav-left').click(function () {
 
 let lightboxIsVisibleValueAboutUs = $('.js-meet-click').hasClass('lightbox--is-visible');
 let lightboxIsVisibleValueFestivities = $('.js-ireland').hasClass('lightbox--is-visible');
+let lightboxIsVisibleValueTravel = $('.js-see').hasClass('lightbox--is-visible');
 let activeSectionAboutUs;
 let activeSectionFestivities;
+let activeSectionTravel;
 
 $('.js-open-menu').click(function () {
 	const active = $('.js-nav-menu--options').find('.js-active-link');
@@ -193,6 +196,12 @@ function setLightboxTextFestivities(iconClicked) {
 	lightboxText.load(`html/${iconClicked}.html`);
 }
 
+function setLightboxTextTravel(iconClicked) {
+	const lightboxText = $('.js-travel-text');
+
+	lightboxText.load(`html/${iconClicked}.html`);
+}
+
 $(window).scroll(function () {
   $('.main-title').each(function () {
     var imagePos = $(this).offset().top;
@@ -207,6 +216,8 @@ $(window).scroll(function () {
   });
 });
 
+
+// ABOUT US / OUR STORY ANIMATIONS
 $('.js-meet-click').click(ourStoryAnimationApply);
 $('.js-love-click').click(ourStoryAnimationApply);
 $('.js-porposal-click').click(ourStoryAnimationApply);
@@ -253,6 +264,7 @@ function ourStoryAnimationApply() {
   }
 }
 
+// FESTIVITIES ANIMATIONS
 $('.js-ireland').click(festivitiesAnimationApply);
 $('.js-ceremony').click(festivitiesAnimationApply);
 $('.js-there').click(festivitiesAnimationApply);
@@ -261,13 +273,14 @@ function festivitiesAnimationApply() {
   'use strict';
   console.log('I`m here FESTIVITIES!');
 
-  let iconClicked = this.classList[0].split('__')[2];
+	let iconClicked = this.classList[0].split('__')[2];
 
-  let lightbox = $('.lightbox-festivities');
-  let optionsMenu = $('.festivies__options');
-  let iconLeft = $('.js-ireland');
-  let iconCenter = $('.js-ceremony');
-  let iconRight= $('.js-there');
+	let lightbox = $('.lightbox-festivities');
+	let optionsMenu = $('.festivities__options');
+	let iconLeft = $('.js-ireland');
+	let iconCenter = $('.js-ceremony');
+	let iconRight= $('.js-there');
+
 
 	setLightboxTextFestivities(iconClicked);
 
@@ -298,6 +311,55 @@ function festivitiesAnimationApply() {
     lightboxIsVisibleValueFestivities = lightbox.hasClass('lightbox--is-visible');
   }
 }
+
+
+// TRAVEL ANIMATIONS
+$('.js-eat').click(travelAnimationApply);
+$('.js-see').click(travelAnimationApply);
+$('.js-sleep').click(travelAnimationApply);
+
+function travelAnimationApply() {
+  'use strict';
+  console.log('I`m here TRAVEL!');
+
+	let iconClicked = this.classList[0].split('__')[2];
+
+	let lightbox = $('.lightbox-travel');
+  let optionsMenu = $('.travel__options');
+  let iconLeft = $('.js-eat');
+  let iconCenter = $('.js-see');
+  let iconRight= $('.js-sleep');
+
+	setLightboxTextTravel(iconClicked);
+
+  if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValueTravel) {
+    iconLeft.toggleClass('travel__icon--is-animation travel__icon--is-animation-left');
+    iconCenter.toggleClass('travel__icon--is-animation travel__icon--is-animation-up');
+    iconRight.toggleClass('travel__icon--is-animation travel__icon--is-animation-right');
+
+    activeSectionTravel = iconClicked;
+
+    // TODO add prefixes for all browsers
+    $('.travel__icon--is-animation').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd',
+      function(){
+        lightbox.toggleClass('animated fadeIn lightbox__travel--is-visible lightbox--is-' + iconClicked);
+    });
+    lightboxIsVisibleValueTravel = !lightboxIsVisibleValueTravel;
+  } else if (lightboxIsVisibleValueTravel === true) {
+    if (iconClicked !== activeSectionTravel) {
+      $('.lightbox-travel').toggleClass('lightbox--is-' + activeSectionTravel);
+      $('.lightbox-travel').toggleClass('lightbox--is-' + iconClicked);
+
+      activeSectionTravel = iconClicked;
+    } else {
+      console.log('hola travel');
+    }
+
+  } else {
+    lightboxIsVisibleValueTravel = lightbox.hasClass('lightbox--is-visible');
+  }
+}
+
 
   // RESPONSIVE TOP NAVIGATION
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
@@ -363,3 +425,10 @@ $('.js-iframe-form').load(function(){
 		const final = $('.freebirdFormviewerViewResponseConfirmationMessage').val() === 'Your response has been recorded.';
 });
 // iframe google form - END
+
+// travel suggestions - START
+// $(document).ready(function() {
+// 	$(function() {
+	// $('js-image-hover > li').hoverdir();
+// 	});
+// });

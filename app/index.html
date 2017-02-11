@@ -20,6 +20,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/first.css">
+    <link rel="stylesheet" href="styles/image_list.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -40,7 +41,6 @@
     <script src="javascripts/jquery.animate-enhanced.min.js"></script>
     <script src="../dist/jquery.superslides.js" type="text/javascript" charset="utf-8"></script> -->
 
-
     <!-- Init the superslides -->
     <script type="text/javascript">
     </script>
@@ -58,6 +58,7 @@
           <li><a class="section-link js-nav-btn" href="#slides">GALLERY</a></li>
           <li><a class="section-link js-nav-btn" href="#festivities-id">FESTIVITIES</a></li>
           <li><a class="section-link js-nav-btn" href="#travel-id">TRAVEL</a></li>
+          <li><a class="section-link js-nav-btn" href="#rsvp-id">RSVP</a></li>
         </ul>
         <a href="" class="js-open-menu section-link" id="openup">MENU</a>
       </nav>
@@ -134,19 +135,19 @@
       <div id="travel-id" class="wrapper travel-wrapper">
         <p class="title travel__title">Travel</p>
         <div class="travel__options">
-          <div class="travel__options__eat travel__icon js-ireland">
-            <img class="icon" src="./images/leprechaun.svg"/>
+          <div class="travel__options__eat travel__icon js-eat">
+            <img class="icon" src="./images/beer.svg"/>
           </div>
-          <div class="travel__options__see travel__icon js-ceremony">
-            <img class="icon" src="./images/wedding-cake-with-heart.svg"/>
+          <div class="travel__options__see travel__icon js-see">
+            <img class="icon icon-see" src="./images/camera.svg"/>
           </div>
-          <div class="travel__options__sleep travel__icon js-there">
-            <img class="icon" src="./images/map.svg"/>
+          <div class="travel__options__sleep travel__icon js-sleep">
+            <img class="icon icon-sleep" src="./images/fireplace.svg"/>
           </div>
         </div>
 
         <div class="lightbox lightbox-travel lightbox--is-round">
-          <div class="js-travel-text lightbox__text">
+          <div class="js-travel-text lightbox__board">
           </div>
         </div>
       </div>
@@ -205,6 +206,10 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/image-hover.js -->
+    <script src="scripts/image-hover.js"></script>
     <!-- endbuild -->
   </body>
 </html>

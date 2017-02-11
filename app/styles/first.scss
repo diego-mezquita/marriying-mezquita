@@ -11,6 +11,8 @@ $icon-higher-position-about-us: 122vh;
 $icon-lower-position-about-us: 150vh;
 $icon-higher-position-festivities: 322vh;
 $icon-lower-position-festivities: 350vh;
+$icon-higher-position-travel: 522vh;
+$icon-lower-position-travel: 550vh;
 $lightbox-color: rgba(255, 255, 255, 0.6);
 
 @font-face {
@@ -303,13 +305,58 @@ if it's not present, don't show loader */
 }
 
 .travel-wrapper {
-  align-items: center;
+  padding: 0 5vw;
+
   background: url("../images/H&D-0157.jpg");
+  // background: url("../images/galway.jpg");
   background-size: cover;
+}
+
+.travel__icon {
+  width: #{$circle-wrapper-size};
+  height: #{$circle-wrapper-size};
+
+  border: 2px solid #fff;
+  border-radius: #{$half-circle-wrapper-size};
+
   display: flex;
   justify-content: center;
-  padding: 0 5vw;
-  z-index: 1;
+  align-items: center;
+}
+
+.travel__title {
+  top: 0vh;
+}
+
+.travel__options {
+  width: 90vw;
+  height: 6vh;
+}
+
+.travel__options__eat {
+  position: absolute;
+  top: 550vh;
+  left: calc(25vw - #{$half-circle-wrapper-size});
+}
+
+.travel__options__see {
+  position: absolute;
+  top: 550vh;
+  left: calc(50vw - #{$half-circle-wrapper-size});
+}
+
+.travel__options__sleep {
+  position: absolute;
+  top: 550vh;
+  right: calc(25vw - #{$half-circle-wrapper-size});
+}
+
+.icon-see {
+  padding-left: 5px;
+}
+
+.icon-sleep {
+  padding: 4px 4px 6px;
 }
 
 .coming-soon {
@@ -722,6 +769,162 @@ if it's not present, don't show loader */
   }
 }
 
+// TRAVEL
+// TRAVEL ANIMATIONS -------
+.lightbox--is-eat {
+  // visibility: hidden;
+  display: inline-block;;
+}
+
+.lightbox--is-eat::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -44px;
+  left: 20px;
+	right: auto;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #{$lightbox-color} transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-see {
+  // visibility: hidden;
+  display: inline-block;;
+}
+
+.lightbox--is-see::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -44px;
+  left: calc(50% - calc(22px / 2));
+  bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #{$lightbox-color} transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox--is-sleep {
+  // visibility: hidden;
+  display: inline-block;
+}
+
+.lightbox--is-sleep::before {
+  content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  top: -44px;
+	right: 20px;
+	bottom: auto;
+	border: 22px solid;
+	border-color: transparent transparent #{$lightbox-color} transparent;
+  z-index: -1;
+  // visibility: hidden;
+}
+
+.lightbox__board {
+  padding: 0 10px 10px;
+  height: 97%;
+  overflow: hidden;
+}
+
+.lightbox__board__section {
+  width: 100%;
+  height: 30vh;
+
+  // background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__board__section:first-of-type {
+  // margin-top: 5%;
+  margin-top: 1%;
+}
+
+.travel__icon--is-animation {
+    // position: relative;
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.travel__icon--is-animationZZZZ {
+    // position: relative;
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.travel__icon--is-animation-up {
+  -webkit-animation-name: animation_up_travel; /* Chrome, Safari, Opera */
+  animation-name: animation_up_travel;
+
+  animation-fill-mode: forwards;
+}
+
+.travel__icon--is-animation-left {
+  -webkit-animation-name: animation_left_travel; /* Chrome, Safari, Opera */
+  animation-name: animation_left_travel;
+
+  animation-fill-mode: forwards;
+}
+
+.travel__icon--is-animation-right {
+  -webkit-animation-name: animation_right_travel; /* Chrome, Safari, Opera */
+  animation-name: animation_right_travel;
+
+  // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+  // animation-duration: 1s;
+  // animation-timing-function: ease-out;
+  // animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation_up_travel {
+  0%   {
+    top: #{$icon-lower-position-travel};
+  }
+  100% {
+    top: #{$icon-higher-position-travel};
+  }
+}
+
+/* Standard syntax */
+@keyframes animation_left_travel {
+  0%   {
+    left: calc(25vw - #{$half-circle-wrapper-size});
+    top: #{$icon-lower-position-travel};
+  }
+  100% {
+    left: calc(10vw - #{$half-circle-wrapper-size});
+    top: #{$icon-higher-position-travel};
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes animation_right_travel {
+  0%   {
+    right: calc(25vw - #{$half-circle-wrapper-size});
+    top: #{$icon-lower-position-travel};
+  }
+  100% {
+    right: calc(10vw - #{$half-circle-wrapper-size});
+    top: #{$icon-higher-position-travel};
+  }
+}
+
+
 
 
 // SUPERSLIDES PAGINATOR css.
@@ -867,6 +1070,8 @@ if it's not present, don't show loader */
 
 // Menu Colours
 $icon-higher-position-about-us-mobile: 112vh;
+$icon-higher-position-festivities-mobile: 312vh;
+$icon-higher-position-travel-mobile: 512vh;
 $circle-wrapper-size-mobile: 55px;
 $half-circle-wrapper-size-mobile: calc(#{$circle-wrapper-size-mobile} / 2);
 $menu-bg: #333;
@@ -1055,6 +1260,7 @@ dialog {
 
   .lightbox {
     // top: 22vh;
+    max-height: 85%;
   }
 
   .lightbox__text {
@@ -1110,11 +1316,78 @@ dialog {
     background-position: center;
   }
 
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_up_f {
+    0%   {
+      top: #{$icon-lower-position-festivities};
+    }
+    100% {
+      top: #{$icon-higher-position-festivities-mobile};
+    }
+  }
+
+  @keyframes animation_left_f {
+    0%   {
+      left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-festivities};
+    }
+    100% {
+      left: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-festivities-mobile};
+    }
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_right_f {
+    0%   {
+      right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-festivities};
+    }
+    100% {
+      right: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-festivities-mobile};
+    }
+  }
+
   .travel-wrapper {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_up_travel {
+    0%   {
+      top: #{$icon-lower-position-travel};
+    }
+    100% {
+      top: #{$icon-higher-position-travel-mobile};
+    }
+  }
+
+  @keyframes animation_left_travel {
+    0%   {
+      left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-travel};
+    }
+    100% {
+      left: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-travel-mobile};
+    }
+  }
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes animation_right_travel {
+    0%   {
+      right: calc(25vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-lower-position-travel};
+    }
+    100% {
+      right: calc(12vw - #{$half-circle-wrapper-size-mobile});
+      top: #{$icon-higher-position-travel-mobile};
+    }
+  }
+
 
   .sections-menu {
     height: auto;
@@ -1230,6 +1503,35 @@ dialog {
 
   .lightbox__about-us--is-visible {
     top: 22vh;
+  }
+
+  .travel-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .travel__icon {
+    width: #{$circle-wrapper-size-mobile};
+    height: #{$circle-wrapper-size-mobile};
+  }
+
+  .travel__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .travel__options__eat {
+    left: calc(25vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .travel__options__see {
+    left: calc(50vw - #{$half-circle-wrapper-size-mobile});
+  }
+
+  .travel__options__sleep {
+    right: calc(25vw - #{$half-circle-wrapper-size-mobile});
   }
 
 } // media

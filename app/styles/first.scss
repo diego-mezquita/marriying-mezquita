@@ -1259,8 +1259,8 @@ dialog {
   }
 
   .lightbox {
-    // top: 22vh;
-    max-height: 85%;
+    top: 22vh;
+    max-height: 70%;
   }
 
   .lightbox__text {
@@ -1273,6 +1273,10 @@ dialog {
     // font-family: 'DK Mango Smoothie';
     font-family: 'Amatic SC', cursive;
     padding-top: 30px;
+  }
+
+  .lightbox__board {
+    padding: 10px 10px 10px;
   }
 
   /* Chrome, Safari, Opera */
@@ -1502,7 +1506,7 @@ dialog {
   }
 
   .lightbox__about-us--is-visible {
-    top: 22vh;
+    // top: 22vh;
   }
 
   .travel-wrapper {

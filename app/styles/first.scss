@@ -61,16 +61,12 @@ if it's not present, don't show loader */
   z-index: 99999;
   justify-content: center;
   align-items: center;
-
-  // background: #606264;
-  // opacity: 0.4;
   background: rgba(96,98,100,0.4);
 }
 
 .logo {
   width: 30px;
   height: 30px;
-  // float:left;
 }
 
 .menu-logo {
@@ -90,9 +86,8 @@ if it's not present, don't show loader */
 }
 
 .nav-menu__option {
-//  float:right;
   margin-right:10px;
-  width: calc(100vw - 52px - 10px); //52px: .logo width; 10px: .nav margin-right
+  width: calc(100vw - 52px - 10px);
   height: 45px;
   display: flex;
   align-items: center;
@@ -114,8 +109,6 @@ if it's not present, don't show loader */
   padding: 0 10px;
 
   text-decoration: none;
-  // font-family: 'Mf I Love Glitter';
-  // font-family: 'DK Mango Smoothie';
   font-family: 'Amatic SC', cursive;
   color: #D8D8D8;
   font-size: 25px;
@@ -131,7 +124,6 @@ if it's not present, don't show loader */
   background: rgba(0,0,0,0.4);
   border-radius: 25px;
   padding: 0;
-  // opacity: 0.5;
 }
 
 .site-wrapper {
@@ -142,10 +134,6 @@ if it's not present, don't show loader */
 }
 
 .wrapper {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
@@ -170,8 +158,6 @@ if it's not present, don't show loader */
 }
 
 .title {
-  // font-family: 'Mf I Love Glitter', 'DK Mango Smoothie'; //Oldtown, fantasy;
-  // font-family: 'Homemade Apple', cursive:
   font-family: 'Princess Sofia', cursive;
   font-size: 100px;
   color: white;
@@ -181,8 +167,6 @@ if it's not present, don't show loader */
 .subtitle {
   padding-top: 45px;
 
-  // font-family: 'Mf I Love Glitter'; //Oldtown, fantasy;
-  // font-family: 'Homemade Apple', cursive;
   font-family: 'Princess Sofia', cursive;
   font-size: 40px;
   color: white;
@@ -193,7 +177,6 @@ if it's not present, don't show loader */
 
   background: url("../images/H&D-0064.jpg");//#404244;
   background-size: cover;
-  // z-index: 2;
 }
 
 .about-us {
@@ -203,21 +186,14 @@ if it's not present, don't show loader */
 }
 
 .about-us__options {
-  // display: flex;
-  // flex-grow: 1;
   width: 90vw;
   height: 6vh;
-  // position: absolute;
-  // top: 50vh;
-  // align-items: center;
-  // justify-content: center;
 }
 
 .about-us__options__meet {
   position: absolute;
   top: 150vh;
   left: calc(25vw - #{$half-circle-wrapper-size});
-  // margin-left: 20px;
 }
 
 .about-us__options__love {
@@ -230,7 +206,6 @@ if it's not present, don't show loader */
   position: absolute;
   top: 150vh;
   right: calc(25vw - #{$half-circle-wrapper-size});
-  // margin-right: 10px;
 }
 
 .icon-love {
@@ -291,16 +266,12 @@ if it's not present, don't show loader */
   border: 2px solid #fff;
   border-radius: #{$half-circle-wrapper-size};
 
-  // position: fixed;
-  // top: 50vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .festivities__title {
-  // position: fixed;
   top: 0vh;
 }
 
@@ -342,7 +313,6 @@ if it's not present, don't show loader */
   padding: 0 5vw;
 
   background: url("../images/H&D-0157.jpg");
-  // background: url("../images/galway.jpg");
   background-size: cover;
 }
 
@@ -401,7 +371,6 @@ if it's not present, don't show loader */
   align-items: center;
 }
 
-
 .picture {
   display: none;
 }
@@ -412,19 +381,6 @@ if it's not present, don't show loader */
 
   display: block;
 }
-
-// .active:before {
-//   content: "<";
-//   color: red;
-//   font-size: 30px;
-//   padding: 100px;
-// }
-//
-// .active:after {
-//   content:">";
-//   color: red;
-//   font-size: 30px;
-// }
 
 .pic-nav {
   position: absolute;
@@ -452,27 +408,12 @@ if it's not present, don't show loader */
 }
 
 // CSS for the ligthboxes -----
-
-/* General CSS Setup */
-// body{
-//   background-color: lightblue;
-//   font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;
-// }
-
-// /* container */
-// .container {
-//   padding: 5% 5%;
-// }
-
 /* CSS talk bubble */
 .lightbox {
   display: none;
   position: relative;
   top: 9vh;
-  // margin-top: 15px;
-  // width: calc(100vw - #{$circle-wrapper-size});
   width: 100%;
-	// height: 50vh;
   min-height: 20vh;
   max-height: 50vh;
   height: 100%;
@@ -497,7 +438,6 @@ if it's not present, don't show loader */
 
 .lightbox__text p:first-child {
   font-size: 50px;
-  // font-family: 'DK Mango Smoothie';
   font-family: 'Amatic SC', cursive;
   padding-top: 30px;
 }
@@ -565,12 +505,10 @@ if it's not present, don't show loader */
 }
 
 .lightbox__about-us--is-visible {
-  // visibility: visible;
   display: block;
 }
 
 .lightbox__festivities--is-visible {
-  // visibility: visible;
   display: block;
 }
 
@@ -592,7 +530,6 @@ if it's not present, don't show loader */
 
 // OUR STORY ANIMATIONS -------
 .about-us__icon--is-animation {
-    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -600,7 +537,6 @@ if it's not present, don't show loader */
 }
 
 .about-us__icon--is-animationZZZZ {
-    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -624,11 +560,6 @@ if it's not present, don't show loader */
 .about-us__icon--is-animation-right {
   -webkit-animation-name: animation_right_au; /* Chrome, Safari, Opera */
   animation-name: animation_right_au;
-
-  // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-  // animation-duration: 1s;
-  // animation-timing-function: ease-out;
-  // animation-fill-mode: forwards;
 }
 
 /* Chrome, Safari, Opera */
@@ -861,7 +792,6 @@ if it's not present, don't show loader */
 }
 
 .travel__icon--is-animation {
-    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -869,7 +799,6 @@ if it's not present, don't show loader */
 }
 
 .travel__icon--is-animationZZZZ {
-    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -1023,10 +952,6 @@ $text-color: #eee;
     text-decoration:none;
   }
 
-  li:hover {
-    // background-color: $menu-hover;
-  }
-
   a#openup {
 	  display: none;
   }
@@ -1097,9 +1022,6 @@ dialog {
 
 
 @media screen and (max-width: 680px) {
-  // h1 {
-	//   font-size: 2.8em;
-  // }
 
   .title-wrapper {
     background-repeat: no-repeat;
@@ -1111,7 +1033,6 @@ dialog {
     margin-top: 2%;
     max-width: 90vw;
     position: fixed;
-    // z-index: 0;
   }
 
   .title {
@@ -1127,7 +1048,6 @@ dialog {
     height: 40px;
     display: block;
     margin: auto;
-    // height: 100%;
   }
 
   .icon-map {
@@ -1143,10 +1063,6 @@ dialog {
   .about-us__icon {
     width: #{$circle-wrapper-size-mobile};
     height: #{$circle-wrapper-size-mobile};
-    //
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
   }
 
   .about-us__options {
@@ -1179,7 +1095,6 @@ dialog {
 
   .lightbox__text p:first-child {
     font-size: 30px;
-    // font-family: 'DK Mango Smoothie';
     font-family: 'Amatic SC', cursive;
     padding-top: 30px;
   }
@@ -1191,10 +1106,6 @@ dialog {
   .lightbox--is-meet::before {
     left: 10px;
   }
-  //
-  // .lightbox--is-love::before {
-  //   left: calc(50% - calc(22px / 2));
-  // }
 
   .lightbox--is-porposal::before {
   	right: 10px;
@@ -1209,10 +1120,6 @@ dialog {
     left: 10px;
   }
 
-  // .lightbox--is-ceremony::before {
-  //   left: calc(50% - calc(22px / 2));
-  // }
-
   .lightbox--is-there::before {
   	right: 10px;
   }
@@ -1221,10 +1128,6 @@ dialog {
   .lightbox--is-eat::before {
     left: 10px;
   }
-
-  // .lightbox--is-see::before {
-  //   left: calc(50% - calc(22px / 2));
-  // }
 
   .lightbox--is-sleep::before {
   	right: 10px;
@@ -1347,14 +1250,9 @@ dialog {
     }
   }
 
-
   .sections-menu {
     height: auto;
     flex-direction: column;
-  }
-
-  .section-link {
-    // border-radius: 0;
   }
 
   .section-link.active-link {
@@ -1381,21 +1279,11 @@ dialog {
 
     }
 
-    li:hover {
-      // background-color: transparent;
-    }
-
   	a {
 	  	text-align: left;
 	  	width: 100%;
 	  	text-indent: 25px;
-			// background: $menu-bg;
-      // border-bottom: 1px solid $menu-border;
   	}
-
-  	//  a:hover {
-	  // 	background: rgba(68, 68, 68, 0.6);
-  	// }
 
 	  a#openup:after {
 		  content:"|||";
@@ -1413,7 +1301,6 @@ dialog {
 
 	  a#openup {
 		  display: block;
-		  // background-color: $menu-bg;
 		  width: 100%;
 		  position: relative;
       border-radius: 0;

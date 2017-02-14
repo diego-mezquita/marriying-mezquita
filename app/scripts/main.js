@@ -4,7 +4,6 @@ console.log('\'Allo \'Allo!');
 // Wait for window load
 // $(window).load(function() {
 $(window).on('load', function() {
-	// Animate loader off screen
 	$('.se-pre-con').fadeOut('slow');;
 });
 
@@ -12,66 +11,6 @@ $(document).ready(function(){
   $('#slides').superslides();
 });
 
-// i18next js set up
-//  VERSION ONE
-// $(document).ready(function() {
-// 	// load modules
-// 	var express = require('express');
-//   var i18n = require("i18n");
-//
-// 	i18n.configure({
-//     locales:['en', 'es'],
-//     directory: __dirname + '/locales'
-// 	});
-//
-// 	getlocale();
-// });
-//  VERSION TWO
-// var resources = {
-//     "es": {
-//         "translation": {
-//             "title": "título",
-//                 "placeholder_1": "introduce nombre",
-//                 "value_1": "valor_1"
-//         }
-//     },
-//         "en": {
-//         "translation": {
-//             "title": "title of the page",
-//                 "placeholder_1": "enter name",
-//                 "value_1": "value 1"
-//         }
-//     }
-// };
-//
-// $(document).ready(function () {
-//     i18n.init({
-//         "lng": 'en',
-//         "resStore": resources,
-//         "fallbackLng" : 'en'
-//     }, function (t) {
-//         $(document).i18n();
-//     });
-//
-//     $('.lang').click(function () {
-//         var lang = $(this).attr('data-lang');
-//         i18n.init({
-//             lng: lang
-//         }, function (t) {
-//             $(document).i18n();
-//         });
-//     });
-// });
-//  VERSION ONE
-// $(document).ready(function () {
-// 	i18n.init(function(err, t) {
-// 	  // translate nav
-// 	  $('.nav').i18n();
-//
-// 	  // programatical access
-// 	  var appName = t('app.name');
-// 	});
-// });
 
 
 $(document).ready(function () {
@@ -111,6 +50,9 @@ function onScroll(event){
     if (refElement && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
       $('.sections-menu nav-menu a').removeClass('active-link js-active-link');
       currLink.addClass('active-link js-active-link');
+
+			// Code for update the mobile top menu bar with the section name when scrolling
+			$('.js-open-menu')[0].innerText = currLink.context.innerText;
     }
     else{
       currLink.removeClass('active-link js-active-link');
@@ -172,7 +114,6 @@ let activeSectionTravel;
 
 $('.js-open-menu').click(function () {
 	const active = $('.js-nav-menu--options').find('.js-active-link');
-	// const linkTo = !active[0].href ?  : active[0].href.split('#');
 
 	if(!!active.href) {
 		$('.js-open-menu').attr('href', active[0].href);
@@ -180,8 +121,6 @@ $('.js-open-menu').click(function () {
 	}
 
   return;
-	// $("#linkId").attr("href", "http://the.new.url");
-
 });
 
 function setLightboxTextOurStory(iconClicked) {
@@ -360,28 +299,6 @@ function travelAnimationApply() {
   }
 }
 
-
-  // RESPONSIVE TOP NAVIGATION
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-// function myFunction() {
-//     var x = document.getElementsById('myTopnav');
-//     if (x.className === "nav-menu") {
-//         x.className += " responsive";
-//     } else {
-//         x.className = "nav-menu";
-//     }
-// }
-
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-// function myFunction() {
-//     var x = document.getElementById("myTopnav");
-//     if (x.className === "topnav") {
-//         x.className += " responsive";
-//     } else {
-//         x.className = "topnav";
-//     }
-// }
-
 $(function() {
 	const menu = $('nav ul');
 
@@ -389,14 +306,6 @@ $(function() {
     e.preventDefault();
 		menu.slideToggle();
   });
-
-  // $(window).resize(function(){
-  //   var w = $(this).width();
-	//
-	// 	if(w > 680 && menu.is(':hidden')) {
-  //     menu.removeAttr('style');
-  //   }
-  // });
 
   $('nav li').on('click', function(e) {
     var w = $(window).width();
@@ -425,10 +334,3 @@ $('.js-iframe-form').load(function(){
 		const final = $('.freebirdFormviewerViewResponseConfirmationMessage').val() === 'Your response has been recorded.';
 });
 // iframe google form - END
-
-// travel suggestions - START
-// $(document).ready(function() {
-// 	$(function() {
-	// $('js-image-hover > li').hoverdir();
-// 	});
-// });

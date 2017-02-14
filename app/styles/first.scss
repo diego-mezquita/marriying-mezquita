@@ -432,7 +432,7 @@ if it's not present, don't show loader */
 .lightbox {
   display: none;
   position: relative;
-  top: 8vh;
+  top: 9vh;
   // margin-top: 15px;
   // width: calc(100vw - #{$circle-wrapper-size});
   width: 100%;
@@ -1259,7 +1259,7 @@ dialog {
   }
 
   .lightbox {
-    top: 22vh;
+    top: 20vh;
     max-height: 70%;
   }
 
@@ -1277,6 +1277,48 @@ dialog {
 
   .lightbox__board {
     padding: 10px 10px 10px;
+  }
+
+  .lightbox--is-meet::before {
+    left: 10px;
+  }
+  //
+  // .lightbox--is-love::before {
+  //   left: calc(50% - calc(22px / 2));
+  // }
+
+  .lightbox--is-porposal::before {
+  	right: 10px;
+  }
+
+  .lightbox--is-ireland {
+    // visibility: hidden;
+    display: inline-block;;
+  }
+
+  .lightbox--is-ireland::before {
+    left: 10px;
+  }
+
+  // .lightbox--is-ceremony::before {
+  //   left: calc(50% - calc(22px / 2));
+  // }
+
+  .lightbox--is-there::before {
+  	right: 10px;
+  }
+
+
+  .lightbox--is-eat::before {
+    left: 10px;
+  }
+
+  // .lightbox--is-see::before {
+  //   left: calc(50% - calc(22px / 2));
+  // }
+
+  .lightbox--is-sleep::before {
+  	right: 10px;
   }
 
   /* Chrome, Safari, Opera */

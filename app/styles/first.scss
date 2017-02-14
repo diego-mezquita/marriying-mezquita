@@ -304,6 +304,40 @@ if it's not present, don't show loader */
   top: 0vh;
 }
 
+.quote-wrapper {
+  background: url("../images/campa-torres.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.quote {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 13%;
+}
+
+.quote-text {
+  color: white;
+  font-family: 'Amatic SC', italic;
+
+}
+
+.quote-quote {
+  font-size: 50px;
+  text-align: center;
+}
+
+.quote-author {
+  font-size: 25px;
+  padding-right: 3%;
+  width: initial;
+}
+
 .travel-wrapper {
   padding: 0 5vw;
 
@@ -360,6 +394,8 @@ if it's not present, don't show loader */
 }
 
 .coming-soon {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,7 +468,7 @@ if it's not present, don't show loader */
 .lightbox {
   display: none;
   position: relative;
-  top: 8vh;
+  top: 9vh;
   // margin-top: 15px;
   // width: calc(100vw - #{$circle-wrapper-size});
   width: 100%;
@@ -477,7 +513,6 @@ if it's not present, don't show loader */
 }
 
 .lightbox--is-meet {
-  // visibility: hidden;
   display: inline-block;;
 }
 
@@ -493,11 +528,9 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox--is-love {
-  // visibility: hidden;
   display: inline-block;;
 }
 
@@ -512,11 +545,9 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox--is-porposal {
-  // visibility: hidden;
   display: inline-block;
 }
 
@@ -531,7 +562,6 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox__about-us--is-visible {
@@ -637,7 +667,6 @@ if it's not present, don't show loader */
 
 // FESTIVITIES ANIMATIONS -------
 .lightbox--is-ireland {
-  // visibility: hidden;
   display: inline-block;;
 }
 
@@ -653,11 +682,9 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox--is-ceremony {
-  // visibility: hidden;
   display: inline-block;;
 }
 
@@ -672,11 +699,9 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox--is-there {
-  // visibility: hidden;
   display: inline-block;
 }
 
@@ -691,12 +716,10 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 
 .festivities__icon--is-animation {
-    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -704,7 +727,6 @@ if it's not present, don't show loader */
 }
 
 .festivities__icon--is-animationZZZZ {
-    // position: relative;
     -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -729,10 +751,6 @@ if it's not present, don't show loader */
   -webkit-animation-name: animation_right_f; /* Chrome, Safari, Opera */
   animation-name: animation_right_f;
 
-  // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-  // animation-duration: 1s;
-  // animation-timing-function: ease-out;
-  // animation-fill-mode: forwards;
 }
 
 /* Chrome, Safari, Opera */
@@ -772,7 +790,6 @@ if it's not present, don't show loader */
 // TRAVEL
 // TRAVEL ANIMATIONS -------
 .lightbox--is-eat {
-  // visibility: hidden;
   display: inline-block;;
 }
 
@@ -788,11 +805,9 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox--is-see {
-  // visibility: hidden;
   display: inline-block;;
 }
 
@@ -807,11 +822,9 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox--is-sleep {
-  // visibility: hidden;
   display: inline-block;
 }
 
@@ -826,7 +839,6 @@ if it's not present, don't show loader */
 	border: 22px solid;
 	border-color: transparent transparent #{$lightbox-color} transparent;
   z-index: -1;
-  // visibility: hidden;
 }
 
 .lightbox__board {
@@ -839,14 +851,12 @@ if it's not present, don't show loader */
   width: 100%;
   height: 30vh;
 
-  // background-color: green;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .lightbox__board__section:first-of-type {
-  // margin-top: 5%;
   margin-top: 1%;
 }
 
@@ -883,11 +893,6 @@ if it's not present, don't show loader */
 .travel__icon--is-animation-right {
   -webkit-animation-name: animation_right_travel; /* Chrome, Safari, Opera */
   animation-name: animation_right_travel;
-
-  // -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-  // animation-duration: 1s;
-  // animation-timing-function: ease-out;
-  // animation-fill-mode: forwards;
 }
 
 /* Chrome, Safari, Opera */
@@ -982,92 +987,6 @@ if it's not present, don't show loader */
   background: #fff;
 }
 
-// RESPONSIVE TOP NAVIGATION
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-// @media screen and (max-width:680px) {
-//   ul.nav-menu li:not(:first-child) {display: none;}
-//   ul.nav-menu li.icon {
-//     float: right;
-//     display: inline-block;
-//   }
-// }
-//
-// /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-// @media screen and (max-width:680px) {
-//   ul.nav-menu.responsive {position: relative;}
-//   ul.nav-menu.responsive li.icon {
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//   }
-//   ul.nav-menu.responsive li {
-//     float: none;
-//     display: inline;
-//   }
-//   ul.nav-menu.responsive li a {
-//     display: block;
-//     text-align: left;
-//   }
-// }
-
-
-  /* Remove margins and padding from the list, and add a black background color */
-//   ul.topnav {
-//       list-style-type: none;
-//       margin: 0;
-//       padding: 0;
-//       overflow: hidden;
-//       background-color: #333;
-//   }
-//
-//   /* Float the list items side by side */
-//   ul.topnav li {float: left;}
-//
-//   /* Style the links inside the list items */
-//   ul.topnav li a {
-//       display: inline-block;
-//       color: #f2f2f2;
-//       text-align: center;
-//       padding: 14px 16px;
-//       text-decoration: none;
-//       transition: 0.3s;
-//       font-size: 17px;
-//   }
-//
-//   /* Change background color of links on hover */
-//   ul.topnav li a:hover {background-color: #555;}
-//
-//   /* Hide the list item that contains the link that should open and close the topnav on small screens */
-//   ul.topnav li.icon {display: none;}
-//
-//   /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-// @media screen and (max-width:680px) {
-//   ul.topnav li:not(:first-child) {display: none;}
-//   ul.topnav li.icon {
-//     float: right;
-//     display: inline-block;
-//   }
-// }
-//
-// /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-// @media screen and (max-width:680px) {
-//   ul.topnav.responsive {position: relative;}
-//   ul.topnav.responsive li.icon {
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//   }
-//   ul.topnav.responsive li {
-//     float: none;
-//     display: inline;
-//   }
-//   ul.topnav.responsive li a {
-//     display: block;
-//     text-align: left;
-//   }
-// }
-
-
 // Menu Colours
 $icon-higher-position-about-us-mobile: 112vh;
 $icon-higher-position-festivities-mobile: 312vh;
@@ -1078,34 +997,10 @@ $menu-bg: #333;
 $menu-border: #555;
 $menu-hover: #444;
 $text-color: #eee;
-//
-// body {
-//   font-family: 'PT Sans Narrow', sans-serif;
-//   background-color: $text-color;
-//   background-image: url('http://i.cubeupload.com/NjsJx8.png');
-//   margin: 0;
-// }
-
-// h1 {
-// 	font-size: 4em;
-// 	font-family: 'PT Sans Narrow', sans-serif;
-// 	line-height: 1.1;
-//   text-align: center;
-//   padding: 10px;
-// }
-//
-// p {
-//   font-size: 1.2em;
-//   text-align: center;
-//   padding: 10px;
-// }
 
 .nav-menu {
-  //top: 0; // Fix the menu to the top
-  //position: fixed; // Fix the menu to the top
   height: 40px;
 	width: 100%;
-  // background-color: $menu-bg;
   color: $text-color;
 
   ul {
@@ -1142,7 +1037,7 @@ dialog {
   border-radius: 6px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   padding: 0;
-  top: 410vh;
+  top: 610vh;
 }
 
 .iframe-form {
@@ -1175,11 +1070,25 @@ dialog {
   outline: 0;
 }
 
+.rsvp-wrapper {
+  background: url("../images/ireland-old-map.jpg");
+  background-size: cover;
+}
+
+.rsvp-button-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .rsvp {
   height: 150px;
   width: 200px;
   cursor: pointer;
   text-decoration: none;
+  z-index: 222;
 }
 .rsvp:hover {
   text-decoration: none;
@@ -1259,8 +1168,8 @@ dialog {
   }
 
   .lightbox {
-    // top: 22vh;
-    max-height: 85%;
+    top: 20vh;
+    max-height: 70%;
   }
 
   .lightbox__text {
@@ -1273,6 +1182,52 @@ dialog {
     // font-family: 'DK Mango Smoothie';
     font-family: 'Amatic SC', cursive;
     padding-top: 30px;
+  }
+
+  .lightbox__board {
+    padding: 10px 10px 10px;
+  }
+
+  .lightbox--is-meet::before {
+    left: 10px;
+  }
+  //
+  // .lightbox--is-love::before {
+  //   left: calc(50% - calc(22px / 2));
+  // }
+
+  .lightbox--is-porposal::before {
+  	right: 10px;
+  }
+
+  .lightbox--is-ireland {
+
+    display: inline-block;;
+  }
+
+  .lightbox--is-ireland::before {
+    left: 10px;
+  }
+
+  // .lightbox--is-ceremony::before {
+  //   left: calc(50% - calc(22px / 2));
+  // }
+
+  .lightbox--is-there::before {
+  	right: 10px;
+  }
+
+
+  .lightbox--is-eat::before {
+    left: 10px;
+  }
+
+  // .lightbox--is-see::before {
+  //   left: calc(50% - calc(22px / 2));
+  // }
+
+  .lightbox--is-sleep::before {
+  	right: 10px;
   }
 
   /* Chrome, Safari, Opera */
@@ -1347,6 +1302,10 @@ dialog {
       right: calc(12vw - #{$half-circle-wrapper-size-mobile});
       top: #{$icon-higher-position-festivities-mobile};
     }
+  }
+
+  .quote-quote {
+    font-size: 35px;
   }
 
   .travel-wrapper {
@@ -1502,7 +1461,7 @@ dialog {
   }
 
   .lightbox__about-us--is-visible {
-    top: 22vh;
+    // top: 22vh;
   }
 
   .travel-wrapper {

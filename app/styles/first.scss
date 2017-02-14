@@ -304,6 +304,39 @@ if it's not present, don't show loader */
   top: 0vh;
 }
 
+.quote-wrapper {
+  background: url("../images/campa-torres.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.quote {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 13%;
+}
+
+.quote-text {
+  color: white;
+  font-family: 'Amatic SC', cursive;
+
+}
+
+.quote-quote {
+  font-size: 50px;
+  text-align: justify;
+}
+
+.quote-author {
+  font-size: 25px;
+  padding-right: 3%;
+}
+
 .travel-wrapper {
   padding: 0 5vw;
 
@@ -1393,6 +1426,10 @@ dialog {
       right: calc(12vw - #{$half-circle-wrapper-size-mobile});
       top: #{$icon-higher-position-festivities-mobile};
     }
+  }
+
+  .quote-quote {
+    font-size: 35px;
   }
 
   .travel-wrapper {

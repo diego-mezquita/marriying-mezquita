@@ -323,18 +323,19 @@ if it's not present, don't show loader */
 
 .quote-text {
   color: white;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', italic;
 
 }
 
 .quote-quote {
   font-size: 50px;
-  text-align: justify;
+  text-align: center;
 }
 
 .quote-author {
   font-size: 25px;
   padding-right: 3%;
+  width: initial;
 }
 
 .travel-wrapper {
@@ -393,6 +394,8 @@ if it's not present, don't show loader */
 }
 
 .coming-soon {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1175,7 +1178,7 @@ dialog {
   border-radius: 6px;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   padding: 0;
-  top: 410vh;
+  top: 610vh;
 }
 
 .iframe-form {
@@ -1208,11 +1211,25 @@ dialog {
   outline: 0;
 }
 
+.rsvp-wrapper {
+  background: url("../images/ireland-old-map.jpg");
+  background-size: cover;
+}
+
+.rsvp-button-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .rsvp {
   height: 150px;
   width: 200px;
   cursor: pointer;
   text-decoration: none;
+  z-index: 222;
 }
 .rsvp:hover {
   text-decoration: none;

@@ -1380,6 +1380,38 @@ dialog {
     right: calc(25vw - #{$half-circle-wrapper-size-mobile});
   }
 
+  .gallery1 {
+    content: url('/images/portrait_1.jpg')
+  }
+
+  .gallery2 {
+    content: url('/images/portrait_2.jpg')
+  }
+
+  .gallery3 {
+    content: url('/images/portrait_3.jpg')
+  }
+
+  .gallery4 {
+    content: url('/images/portrait_4.jpg')
+  }
+
+  .gallery5 {
+    content: url('/images/portrait_5.jpg')
+  }
+
+  .gallery6 {
+    content: url('/images/portrait_6.jpg')
+  }
+
+  .gallery8 {
+    // content: url('/images/portrait.jpg')
+  }
+
+  .gallery9 {
+    // content: url('/images/portrait.jpg')
+  }
+
 } // media
 
 .cf:before, .cf:after { content:""; display:table; }

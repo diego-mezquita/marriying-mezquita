@@ -9,12 +9,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:js scripts/vendor/jquery.min.js -->
-    <script src="/bower_components/jquery/jquery.min.js"></script>
-    <!-- endbuild -->
-
-    <!-- build:js scripts/vendor/i18next.min.js -->
-    <!-- <script type="text/javascript" src="node_modules/i18next/i18next.js" /> -->
+    <!-- build:js scripts/vendor/jquery.js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
@@ -29,6 +25,10 @@
 
     <!-- build:js scripts/vendor/superslides.min.js -->
     <script src="/bower_components/superslides/dist/jquery.superslides.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/i18next.min.js -->
+    <script type="text/javascript" src="bower_components/i18next/i18next.min.js"></script>
     <!-- endbuild -->
 
     <!-- <link rel="stylesheet" type="text/css" href="/bower_components/superslides/dist/stylesheets/superslides.css"> -->
@@ -54,7 +54,7 @@
       <nav class="sections-menu cf nav-menu">
         <img class="logo menu-logo" src="./images/four-leaf-clover.svg"/>
         <ul class="nav-menu__option cf js-nav-menu--options">
-          <li><a class="section-link js-nav-btn" href="#about-us-id">OUR STORY</a></li>
+          <li><a class="section-link js-nav-btn js-i18next" href="#about-us-id">OUR STORY</a></li>
           <li><a class="section-link js-nav-btn" href="#slides">GALLERY</a></li>
           <li><a class="section-link js-nav-btn" href="#festivities-id">FESTIVITIES</a></li>
           <li><a class="section-link js-nav-btn" href="#travel-id">TRAVEL</a></li>

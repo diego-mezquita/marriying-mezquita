@@ -1,11 +1,51 @@
 console.log('\'Allo \'Allo!');
 
+// import i18next from 'i18next';
+
 // LOADING
 // Wait for window load
-// $(window).load(function() {
 $(window).on('load', function() {
 	$('.se-pre-con').fadeOut('slow');;
 });
+
+// i18next testing START _ SECOND VERSION
+
+$(document).ready(function(){
+	const  language_complete = navigator.language.split("-");
+	const language = (language_complete[0]);
+	console.log("BL: %s", language);
+	const fileNamespace = 'translation';
+	const pathToTranslation = `../locales/${language}/${fileNamespace}.json`;
+
+	i18next.init(
+		{
+			lng: language,
+			debug: true,
+			loadPath: pathToTranslation,
+			ns: {
+					namespaces: ['translation'],
+					defaultNs: 'translation'
+			}
+		}, function() {
+		// save to use translation function as resources are fetched
+		console.log('-----------------------------');
+		console.log('-----------------------------');
+		console.log('-----------------------------');
+		console.log('------        IN         ----');
+		console.log('-----------------------------');
+		console.log('-----------------------------');
+		console.log('-----------------------------');
+		// $(".menu").i18n();
+		// $("headline").i18n();
+		$('.js-i18next');
+		console.log(i18next.t('m'));
+		console.log('-----------------------------');
+		console.log('-----------------------------');
+		console.log('-----------------------------');
+	});
+});
+
+// i18next testing END _ SECOND VERSION
 
 $(document).ready(function(){
   $('#slides').superslides();
@@ -13,8 +53,26 @@ $(document).ready(function(){
 
 
 
+
 $(document).ready(function () {
-  $(document).on('scroll', onScroll);
+	// i18next testing START
+	// i18next.init({
+	//   // "debug": true,
+	//   "lng": "en-US",
+	//   // "fallbackLng": "es-ES"
+	// 	// ,
+	//   "backend": {
+	//     "loadPath": "locales/{{lng}}/{{ns}}.json"
+	//   }
+	// });
+	//
+	// console.log(i18next.language);
+	//
+	// console.log(i18next.t('i18next.translation.app.name'));
+	// console.log(i18next.t('nav.home'));
+  // $(document).on('scroll', onScroll);
+// i18next testing END
+
 
   //smoothscroll
   $('a[href^="#"]').on('click', function (e) {
@@ -42,7 +100,7 @@ function onScroll(event){
   var scrollPos = $(document).scrollTop();
   $('.sections-menu a').each(function () {
     var currLink = $(this);
-		if (currLink.context.id && currLink.context.id === 'openup') {
+		if (currLink[0].id && currLink[0].id === 'openup') {
 			currLink = $(this);
 			return true;
 		}
@@ -52,7 +110,7 @@ function onScroll(event){
       currLink.addClass('active-link js-active-link');
 
 			// Code for update the mobile top menu bar with the section name when scrolling
-			$('.js-open-menu')[0].innerText = currLink.context.innerText;
+			$('.js-open-menu')[0].innerText = currLink[0].innerText;
     }
     else{
       currLink.removeClass('active-link js-active-link');

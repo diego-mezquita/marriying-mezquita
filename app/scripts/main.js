@@ -11,9 +11,9 @@ $(window).on('load', function() {
 // i18next testing START _ SECOND VERSION
 
 $(document).ready(function(){
-	const  language_complete = navigator.language.split("-");
+	const  language_complete = navigator.language.split('-');
 	const language = (language_complete[0]);
-	console.log("BL: %s", language);
+	console.log('BL: %s', language);
 	const fileNamespace = 'translation';
 	const pathToTranslation = `../locales/${language}/${fileNamespace}.json`;
 

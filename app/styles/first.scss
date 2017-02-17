@@ -1380,6 +1380,43 @@ dialog {
     right: calc(25vw - #{$half-circle-wrapper-size-mobile});
   }
 
+  .portrait {
+    max-width: 200% !important;
+    min-height: 100% !important;
+  }
+
+  .gallery1 {
+    left: -80px !important;
+  }
+
+  .gallery2 {
+    left: -32px !important;
+  }
+
+  .gallery3 {
+    left: -450px !important;
+  }
+
+  .gallery4 {
+    left: 0 !important;
+  }
+
+  .gallery5 {
+    left: 0 !important;
+  }
+
+  .gallery6 {
+    left: -92px !important;
+  }
+
+  .gallery8 {
+    left: -600px !important;
+  }
+
+  .gallery9 {
+    left: -550px !important;
+  }
+
 } // media
 
 .cf:before, .cf:after { content:""; display:table; }

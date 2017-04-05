@@ -231,6 +231,13 @@ function ourStoryAnimationApply() {
   let iconCenter = $('.js-love-click');
   let iconRight= $('.js-porposal-click');
 
+	iconLeft.removeClass('shaking-button five-secs');
+	iconCenter.removeClass('shaking-button seven-secs');
+	iconRight.removeClass('shaking-button eleven-secs');
+	iconLeft.addClass('icon-grow');
+	iconCenter.addClass('icon-grow');
+	iconRight.addClass('icon-grow');
+
 	setLightboxTextOurStory(iconClicked);
 
   if(!lightbox.hasClass('lightbox--is-visible') && !lightboxIsVisibleValueAboutUs) {
@@ -278,6 +285,12 @@ function festivitiesAnimationApply() {
 	let iconCenter = $('.js-ceremony');
 	let iconRight= $('.js-there');
 
+	iconLeft.removeClass('shaking-button seven-secs');
+	iconCenter.removeClass('shaking-button eleven-secs');
+	iconRight.removeClass('shaking-button five-secs');
+	iconLeft.addClass('icon-grow');
+	iconCenter.addClass('icon-grow');
+	iconRight.addClass('icon-grow');
 
 	setLightboxTextFestivities(iconClicked);
 
@@ -326,6 +339,13 @@ function travelAnimationApply() {
   let iconLeft = $('.js-eat');
   let iconCenter = $('.js-see');
   let iconRight= $('.js-sleep');
+
+	iconLeft.removeClass('shaking-button eleven-secs');
+	iconCenter.removeClass('shaking-button five-secs');
+	iconRight.removeClass('shaking-button seven-secs');
+	iconLeft.addClass('icon-grow');
+	iconCenter.addClass('icon-grow');
+	iconRight.addClass('icon-grow');
 
 	setLightboxTextTravel(iconClicked);
 

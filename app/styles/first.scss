@@ -15,6 +15,38 @@ $icon-higher-position-travel: 522vh;
 $icon-lower-position-travel: 550vh;
 $lightbox-color: rgba(255, 255, 255, 0.6);
 
+
+// animation test start
+// .shaking-button:hover {
+//   // animation-name: shake;
+//   // animation-duration: 2s;
+//   // animation-timing-function: cubic-bezier(.36,.07,.19,.97);
+//   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+//   transform: translate3d(0, 0, 0);
+//   backface-visibility: hidden;
+//   perspective: 1000px;
+//   background-color: black;
+// }
+//
+// @keyframes shake {
+//   10%, 90% {
+//     transform: translate3d(-1px, -1px, 0);
+//   }
+//
+//   20%, 80% {
+//     transform: translate3d(2px, 2px, 0);
+//   }
+//
+//   30%, 50%, 70% {
+//     transform: translate3d(-4px, -4px, 0);
+//   }
+//
+//   40%, 60% {
+//     transform: translate3d(4px, 4px, 0);
+//   }
+// }
+// animation test end
+
 @font-face {
   font-family: 'Mf I Love Glitter';
   src: URL('fonts/mf-i-love-glitter.ttf') format ('ttf');
@@ -224,6 +256,7 @@ if it's not present, don't show loader */
   border: 2px solid #fff;
   border-radius: #{$half-circle-wrapper-size};
 
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,6 +299,7 @@ if it's not present, don't show loader */
   border: 2px solid #fff;
   border-radius: #{$half-circle-wrapper-size};
 
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,6 +357,7 @@ if it's not present, don't show loader */
   border: 2px solid #fff;
   border-radius: #{$half-circle-wrapper-size};
 
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -530,8 +565,8 @@ if it's not present, don't show loader */
 
 // OUR STORY ANIMATIONS -------
 .about-us__icon--is-animation {
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-duration: 1s;
+    -webkit-animation-duration: 1s !important; /* Chrome, Safari, Opera */
+    animation-duration: 1s !important;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -651,8 +686,8 @@ if it's not present, don't show loader */
 
 
 .festivities__icon--is-animation {
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-duration: 1s;
+    -webkit-animation-duration: 1 !important; /* Chrome, Safari, Opera */
+    animation-duration: 1s !important;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -792,8 +827,8 @@ if it's not present, don't show loader */
 }
 
 .travel__icon--is-animation {
-    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
-    animation-duration: 1s;
+    -webkit-animation-duration: 1s !important; /* Chrome, Safari, Opera */
+    animation-duration: 1s !important;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }

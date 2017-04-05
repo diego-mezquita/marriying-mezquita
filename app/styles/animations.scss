@@ -1,0 +1,89 @@
+.shaking-button {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.five-secs {
+  animation: shake-five-secs 5s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+.seven-secs {
+  animation: shake-seven-secs 7s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+.eleven-secs {
+  animation: shake-eleven-secs 11s cubic-bezier(.36,.07,.19,.97) infinite;
+}
+
+.icon-grow:hover {
+  transform: scale(1.1);
+  // cursor: pointer;
+  animation-duration: 0.5s;
+}
+
+@keyframes shake-five-secs {
+  2%, 18% {
+    transform: translate3d(-1px, -1px, 0);
+  }
+
+  4%, 16% {
+    transform: translate3d(2px, -2px, 0);
+  }
+
+  6%, 10%, 14% {
+    transform: translate3d(-4px, -4px, 0);
+  }
+
+  8%, 12% {
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  19% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shake-seven-secs {
+  1.4%, 13% {
+    transform: translate3d(-1px, -1px, 0);
+  }
+
+  2.8%, 11.2% {
+    transform: translate3d(2px, -2px, 0);
+  }
+
+  4.2%, 7%, 9.8% {
+    transform: translate3d(-4px, -4px, 0);
+  }
+
+  5.6%, 8.4% {
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  14% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shake-eleven-secs {
+  0.9%, 8.7% {
+    transform: translate3d(-1px, -1px, 0);
+  }
+
+  1.8%, 7.8% {
+    transform: translate3d(2px, -2px, 0);
+  }
+
+  2.9%, 4.7%, 6.7% {
+    transform: translate3d(-4px, -4px, 0);
+  }
+
+  3.8%, 5.7% {
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  9% {
+    transform: translate3d(0, 0, 0);
+  }
+}
